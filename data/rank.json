@@ -1,0 +1,391 @@
+[
+    {
+        "describe": "英雄联盟",
+        "titPrice":"腾讯运营",
+        "titleImage": "../img/rank-title1.jpg",
+        "value":[
+            {
+                "ranking": "../img/rank-first2.jpg",
+                "rankCont": "../img/rank-cont2.jpg",
+                "name": "梦三国2",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first3.jpg",
+                "rankCont": "../img/rank-cont3.jpg",
+                "name": "激战2",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first4.jpg",
+                "rankCont": "../img/rank-cont4.jpg",
+                "name": "龙之谷",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first5.jpg",
+                "rankCont": "../img/rank-cont5.jpg",
+                "name": "机动战士敢达",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first6.jpg",
+                "rankCont": "../img/rank-cont6.jpg",
+                "name": "仙侠世界2",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first7.jpg",
+                "rankCont": "../img/rank-cont7.jpg",
+                "name": "霓虹深渊",
+                "price": "免费"
+            }
+        ],
+        "title":"火爆热品"
+    },
+    {
+            "describe": "海战世界",
+            "titPrice": "2020-08-13更新",
+            "titleImage": "../img/rank-title2.jpg",
+            "value": [{
+                    "ranking": "../img/rank-first2.jpg",
+                    "rankCont": "../img/rank-cont7.jpg",
+                    "name": "打造世界",
+                    "price": "￥18"
+                },
+                {
+                    "ranking": "../img/rank-first3.jpg",
+                    "rankCont": "../img/rank-cont8.jpg",
+                    "name": "星露谷物语",
+                    "price": "￥48"
+                },
+                {
+                    "ranking": "../img/rank-first4.jpg",
+                    "rankCont": "../img/rank-cont9.jpg",
+                    "name": "深海迷航",
+                    "price": "免费"
+                },
+                {
+                    "ranking": "../img/rank-first5.jpg",
+                    "rankCont": "../img/rank-cont10.jpg",
+                    "name": "饥荒：单机版",
+                    "price": "免费"
+                },
+                {
+                    "ranking": "../img/rank-first6.jpg",
+                    "rankCont": "../img/rank-cont11.jpg",
+                    "name": "混沌银河",
+                    "price": "免费"
+                },
+                {
+                    "ranking": "../img/rank-first7.jpg",
+                    "rankCont": "../img/rank-cont12.jpg",
+                    "name": "霓虹深渊",
+                    "price": "免费"
+                }
+            ],
+            "title": "本周热销"
+    },
+    {
+        "describe": "超级巴基球",
+        "titPrice": "2020-08-13更新",
+        "titleImage": "../img/rank-title3.jpg",
+        "title": "新游上架",
+         "value": [
+             {
+                 "ranking": "../img/rank-first2.jpg",
+                 "rankCont": "../img/rank-cont2.jpg",
+                 "name": "梦三国2",
+                 "price": "免费"
+             },
+             {
+                 "ranking": "../img/rank-first3.jpg",
+                 "rankCont": "../img/rank-cont3.jpg",
+                 "name": "激战2",
+                 "price": "免费"
+             },
+             {
+                 "ranking": "../img/rank-first4.jpg",
+                 "rankCont": "../img/rank-cont4.jpg",
+                 "name": "龙之谷",
+                 "price": "免费"
+             },
+             {
+                 "ranking": "../img/rank-first5.jpg",
+                 "rankCont": "../img/rank-cont5.jpg",
+                 "name": "机动战士敢达",
+                 "price": "免费"
+             },
+             {
+                 "ranking": "../img/rank-first6.jpg",
+                 "rankCont": "../img/rank-cont6.jpg",
+                 "name": "仙侠世界2",
+                 "price": "免费"
+             },
+             {
+                 "ranking": "../img/rank-first7.jpg",
+                 "rankCont": "../img/rank-cont7.jpg",
+                 "name": "霓虹深渊",
+                 "price": "免费"
+             }
+         ]
+    }, 
+    {
+        "describe": "超级巴基球",
+        "titPrice": "2020-08-13更新",
+        "titleImage": "../img/rank-title1.jpg",
+        "title": "口碑佳作",
+        "value": [{
+                "ranking": "../img/rank-first2.jpg",
+                "rankCont": "../img/rank-cont7.jpg",
+                "name": "打造世界",
+                "price": "￥18"
+            },
+            {
+                "ranking": "../img/rank-first3.jpg",
+                "rankCont": "../img/rank-cont8.jpg",
+                "name": "星露谷物语",
+                "price": "￥48"
+            },
+            {
+                "ranking": "../img/rank-first4.jpg",
+                "rankCont": "../img/rank-cont9.jpg",
+                "name": "深海迷航",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first5.jpg",
+                "rankCont": "../img/rank-cont10.jpg",
+                "name": "饥荒：单机版",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first6.jpg",
+                "rankCont": "../img/rank-cont11.jpg",
+                "name": "混沌银河",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first7.jpg",
+                "rankCont": "../img/rank-cont12.jpg",
+                "name": "霓虹深渊",
+                "price": "免费"
+            }
+        ]
+    },
+    {
+        "describe": "超级巴基球",
+        "titPrice": "2020-08-13更新",
+        "titleImage": "../img/rank-title1.jpg",
+        "title": "最多关注",
+        "value": [{
+                "ranking": "../img/rank-first2.jpg",
+                "rankCont": "../img/rank-cont2.jpg",
+                "name": "梦三国2",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first3.jpg",
+                "rankCont": "../img/rank-cont3.jpg",
+                "name": "激战2",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first4.jpg",
+                "rankCont": "../img/rank-cont4.jpg",
+                "name": "龙之谷",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first5.jpg",
+                "rankCont": "../img/rank-cont5.jpg",
+                "name": "机动战士敢达",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first6.jpg",
+                "rankCont": "../img/rank-cont6.jpg",
+                "name": "仙侠世界2",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first7.jpg",
+                "rankCont": "../img/rank-cont7.jpg",
+                "name": "霓虹深渊",
+                "price": "免费"
+            }
+        ]
+    },
+    {
+        "describe": "超级巴基球",
+        "titPrice": "2020-08-13更新",
+        "titleImage": "../img/rank-title1.jpg",
+        "title": "折扣促销",
+        "value": [{
+                "ranking": "../img/rank-first2.jpg",
+                "rankCont": "../img/rank-cont2.jpg",
+                "name": "梦三国2",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first3.jpg",
+                "rankCont": "../img/rank-cont3.jpg",
+                "name": "激战2",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first4.jpg",
+                "rankCont": "../img/rank-cont4.jpg",
+                "name": "龙之谷",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first5.jpg",
+                "rankCont": "../img/rank-cont5.jpg",
+                "name": "机动战士敢达",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first6.jpg",
+                "rankCont": "../img/rank-cont6.jpg",
+                "name": "仙侠世界2",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first7.jpg",
+                "rankCont": "../img/rank-cont7.jpg",
+                "name": "霓虹深渊",
+                "price": "免费"
+            }
+        ]
+    },
+    {
+        "describe": "超级巴基球",
+        "titPrice": "2020-08-13更新",
+        "titleImage": "../img/rank-title1.jpg",
+        "title": "最新更新",
+        "value": [{
+                "ranking": "../img/rank-first2.jpg",
+                "rankCont": "../img/rank-cont2.jpg",
+                "name": "梦三国2",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first3.jpg",
+                "rankCont": "../img/rank-cont3.jpg",
+                "name": "激战2",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first4.jpg",
+                "rankCont": "../img/rank-cont4.jpg",
+                "name": "龙之谷",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first5.jpg",
+                "rankCont": "../img/rank-cont5.jpg",
+                "name": "机动战士敢达",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first6.jpg",
+                "rankCont": "../img/rank-cont6.jpg",
+                "name": "仙侠世界2",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first7.jpg",
+                "rankCont": "../img/rank-cont7.jpg",
+                "name": "霓虹深渊",
+                "price": "免费"
+            }
+        ]
+    },
+    {
+        "describe": "超级巴基球",
+        "titPrice": "2020-08-13更新",
+        "titleImage": "../img/rank-title1.jpg",
+        "title": "最高热度",
+        "value": [{
+                "ranking": "../img/rank-first2.jpg",
+                "rankCont": "../img/rank-cont2.jpg",
+                "name": "梦三国2",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first3.jpg",
+                "rankCont": "../img/rank-cont3.jpg",
+                "name": "激战2",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first4.jpg",
+                "rankCont": "../img/rank-cont4.jpg",
+                "name": "龙之谷",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first5.jpg",
+                "rankCont": "../img/rank-cont5.jpg",
+                "name": "机动战士敢达",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first6.jpg",
+                "rankCont": "../img/rank-cont6.jpg",
+                "name": "仙侠世界2",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first7.jpg",
+                "rankCont": "../img/rank-cont7.jpg",
+                "name": "霓虹深渊",
+                "price": "免费"
+            }
+        ]
+    },
+     {
+        "describe": "超级巴基球",
+        "titPrice": "2020-08-13更新",
+        "titleImage": "../img/rank-title1.jpg",
+        "title": "最新测试",
+        "value": [{
+                "ranking": "../img/rank-first2.jpg",
+                "rankCont": "../img/rank-cont2.jpg",
+                "name": "梦三国2",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first3.jpg",
+                "rankCont": "../img/rank-cont3.jpg",
+                "name": "激战2",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first4.jpg",
+                "rankCont": "../img/rank-cont4.jpg",
+                "name": "龙之谷",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first5.jpg",
+                "rankCont": "../img/rank-cont5.jpg",
+                "name": "机动战士敢达",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first6.jpg",
+                "rankCont": "../img/rank-cont6.jpg",
+                "name": "仙侠世界2",
+                "price": "免费"
+            },
+            {
+                "ranking": "../img/rank-first7.jpg",
+                "rankCont": "../img/rank-cont7.jpg",
+                "name": "霓虹深渊",
+                "price": "免费"
+            }
+        ]
+    }
+]
