@@ -181,9 +181,7 @@ body::after{
     font-size: 15px;
     position: relative;
 }
-/* .fr-left li:nth-child(1){
-    margin-left: 0;
-} */
+
 .fr-left .fr-li{
     margin-right: 0;
 }
@@ -307,7 +305,7 @@ body::after{
 }
 .fr-hidebox{
     position: absolute;
-    max-height: 330px;
+    max-height: 550px;
     top: 35px;
     left: 0;
     width: 100%;
@@ -321,6 +319,21 @@ body::after{
     border-radius: 3px;
     display: none;
     z-index: 20;
+}
+
+.fr-ipt-ul {
+    width: 100%;
+
+    li {
+        height: 40px;
+        line-height: 40px;
+        padding-left: 20px;
+        box-sizing: border-box;
+        overflow: hidden;
+        &:hover{
+            background: #f4f4f4;
+        }
+    }
 }
 .fr-botbox{
     overflow: hidden;
@@ -1357,7 +1370,7 @@ body::after{
     float: left;
 }
 
-.game-aleft {
+.game-aleft{
     width: 199px;
     height: 285px;
     overflow: hidden;
@@ -1365,6 +1378,12 @@ body::after{
 }
 .game-img1{
     width: 199px;
+    cursor: pointer;
+    transition:all .4s ;
+    transform: scale(1) translateZ(0);
+    &:hover{    
+    transform: scale(1.06) translateZ(0);
+    }
 }
 .game-arightWrap{
     width: 271px;
@@ -1500,8 +1519,15 @@ body::after{
 .game2-top{
     width: 225px;
     height: 126px;
+    overflow: hidden;
+    cursor: pointer;
     img{
         width: 225px;
+        transition: all .4s;
+        transform: scale(1) translateZ(0);
+        &:hover{
+            transform: scale(1.06) translateZ(0);
+        }
     }
 }
 
@@ -1610,8 +1636,15 @@ body::after{
 .update-boxtop{
     width: 320px;
     height: 180px;
+    cursor: pointer;
+    overflow: hidden;
     img{
         width: 320px;
+        transition: all .4s;
+        transform: scale(1) translateZ(0);
+        &:hover{
+            transform: scale(1.06) translateZ(0);
+        }
     }
 }
 .update-boxbot{
@@ -1837,7 +1870,7 @@ body::after{
     box-sizing: border-box;
 }
 .recommend-line{
-    width: 550px;
+    width: 0px;
     height: 2px;
     background-color: #fff;
     position: absolute;
@@ -1938,9 +1971,16 @@ body::after{
     .recommend-list-item{
         display: inline-block;
         padding-right: 8px;
+        overflow: hidden;
         img{
+            cursor: pointer;
             width: 160px;
             border-radius: 5px;
+            transition: all .4s;
+            transform: scale(1) translateZ(0);
+            &:hover {
+                transform: scale(1.06) translateZ(0);
+            }
         }
     }
 }
@@ -2068,6 +2108,10 @@ body::after{
          height: 12px;
          margin-bottom: 15px;
          font-weight: bold;
+         cursor: pointer;
+         &:hover{
+             color: #909090;
+         }
      }
 }
 .foot-topRightul li:nth-child(2){
@@ -2092,6 +2136,10 @@ body::after{
         font-size: 12px;
         margin-left: 4px;
         color: #5d5d5d;
+        cursor: pointer;
+        &:hover {
+            color: #909090;
+        }
     }
 }
 .copy{
@@ -2107,4 +2155,8 @@ body::after{
     text-align: center;
     line-height: 46px;
     color: #5d5d5d;
+    cursor: pointer;
+    &:hover {
+        color: #909090;
+    }
 }

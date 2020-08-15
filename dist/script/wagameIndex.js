@@ -46,20 +46,35 @@ $fript.click(function(){
     $frhide.fadeIn(500);
 })
 $fript.blur(function () {
-    // if (frFalg) {
-    //     frFalg = 0;
-    //     return;
-    // }else{
-    //     if($fript.val()){
-
-    //         $frhide.css('display', 'none');
-    //         return;
-    //     }
-
-    // }
+    $fript.val(' ');
     $frclose.css('display', 'none');
     $frhide.css('display', 'none');
 })
+
+/* find输入框jsonp请求 */
+$fript.keyup(function(){
+  $.ajax({
+    url:'../php/baidu.php',
+    tepe:'get',
+    data: 'wd='+$fript.val(),
+    dataType: 'json',
+    success: function (json) {
+      console.log(json);
+      $('.fr-ipt-ul').html('');
+      // $('.fr-ipt-ul').innerHTML = '';
+      json.s.forEach(function (item) {
+        console.log(item);
+        $('.fr-ipt-ul')[0].innerHTML += '<li>' + item + '</li>';
+      });
+      if ($fript.val() == '') {
+        ('.fr-ipt-ul').css('height',0);
+      }
+    }
+  })
+})
+
+
+
 
 /* banner */
    //分页器
@@ -496,7 +511,7 @@ $updatePrev.click(function () {
     $updateBot.scrollLeft(updateLiWidth * $updateLi.length);
   }
   $updateBot.stop(true,true).animate({
-    'scrollLeft': updateIndex * updateLiWidth
+    'scrollLeft': updateIndex * updateLiWidth+10
   })
 })
 $updateNext.click(function () {
@@ -506,6 +521,38 @@ $updateNext.click(function () {
     $updateBot.scrollLeft(0);
   }
   $updateBot.stop(true,true).animate({
-    'scrollLeft': updateIndex * updateLiWidth
+    'scrollLeft': updateIndex * updateLiWidth+10
   })
 })
+
+
+/* 蛋蛋君推荐 */
+
+var $recomLine = $('.recommend-line');
+var $recomBot = $('.recommend-bot');
+var $recomMove = $('.recommend-move');
+var recomTimer;
+var moveLength = 25;
+$recomBot.mouseenter(function(){
+  $recomLine.stop(true,true).animate({
+    "width":550
+  })
+  recomTimer =  setInterval(()=>{
+    moveLength -= 5;
+    if(moveLength <= 5){
+      moveLength = 25;
+    }
+    $recomMove.animate({
+      "right": moveLength
+    },100)
+  },10)
+})
+$recomBot.mouseleave(function () {
+  clearInterval(recomTimer);
+  $recomLine.stop(true, true).animate({
+    "width": 0
+  })
+})
+
+
+/* 底部 */

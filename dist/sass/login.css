@@ -1,0 +1,319 @@
+body,
+html {
+  width: 100%;
+  height: 100%; }
+
+/* body */
+body::after {
+  content: "";
+  background-color: #eee;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: -100;
+  pointer-events: none;
+  background-color: #eee;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-image: url(../img/login.png); }
+
+.header {
+  width: 990px;
+  height: 80px;
+  margin: 0 auto; }
+
+.header img {
+  float: left;
+  margin-top: 20px; }
+
+.header h2 {
+  float: left;
+  margin-left: 24px;
+  margin-top: 32px;
+  color: #fff; }
+
+.header p {
+  color: #999;
+  float: right;
+  width: 140px;
+  height: 16px;
+  margin-top: 54px;
+  font-size: 12px; }
+
+.xinxi {
+  margin-right: 4px; }
+
+/* anquan */
+.anquanWrap {
+  width: 100%;
+  background-color: #FEC400;
+  overflow: hidden; }
+
+.anquan {
+  width: 990px;
+  height: 39px;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 39px; }
+
+.anquan p {
+  color: #999; }
+
+.anquan p img {
+  vertical-align: middle;
+  margin-top: -2px; }
+
+.anquan p span {
+  color: #333333; }
+
+/* banner */
+.bannerWrap {
+  width: 100%;
+  height: 475px; }
+
+.banner {
+  width: 990px;
+  height: 475px;
+  margin: 0 auto;
+  overflow: hidden; }
+
+.bannerBox {
+  width: 346px;
+  height: 428px;
+  background-color: #fff;
+  float: right;
+  margin-top: 10px; }
+
+.banTop {
+  width: 346px;
+  height: 39px;
+  background-color: #fff8f0;
+  text-align: center;
+  line-height: 39px;
+  color: #999; }
+
+.banTop img {
+  vertical-align: middle;
+  margin-top: -2px; }
+
+.saoma {
+  width: 346px;
+  height: 54px;
+  overflow: hidden; }
+
+.saoma img {
+  vertical-align: middle;
+  margin-top: 18px; }
+
+.saoma .smLeft {
+  float: left;
+  width: 171px;
+  height: 54px;
+  text-align: center;
+  line-height: 54px;
+  font-size: 16px;
+  color: #e4393c;
+  font-weight: bold;
+  cursor: pointer; }
+
+.saoma .smRight {
+  float: right;
+  width: 171px;
+  height: 54px;
+  text-align: center;
+  line-height: 54px;
+  font-size: 16px;
+  color: #666666;
+  font-weight: bold;
+  cursor: pointer; }
+
+/* banLogin */
+.banLoWrap {
+  width: 346px;
+  height: 283px;
+  position: relative; }
+
+.banLogin {
+  width: 346px;
+  height: 283px;
+  border-top: 1px solid #f4f4f4;
+  border-bottom: 1px solid #f4f4f4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* display: none; */ }
+
+.banLogin .erwei {
+  width: 346px;
+  height: 178px;
+  position: relative; }
+
+.erweiWrap {
+  position: absolute;
+  top: 20px;
+  left: 84px;
+  padding: 8px 12px;
+  border: 1px solid #f4f4f4; }
+
+.erImg {
+  float: left; }
+
+.orange {
+  display: none;
+  position: absolute;
+  right: -180px;
+  top: -2px;
+  width: 141px;
+  height: 168px;
+  background: url(img/phone-orange.png) no-repeat;
+  z-index: 99; }
+
+.banOpen {
+  color: #666666;
+  text-align: center;
+  margin-top: 24px; }
+
+.banOpen span {
+  color: #e4393c; }
+
+.banOpen ul {
+  overflow: hidden;
+  margin-top: 16px;
+  margin-left: 40px; }
+
+.banOpen ul li {
+  float: left;
+  margin-left: 19px;
+  color: #999999; }
+
+.banBot {
+  width: 304px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 21px; }
+
+.banBot ul {
+  float: left; }
+
+.banBot ul li {
+  float: left;
+  margin-right: 14px; }
+
+.banBot p {
+  float: right;
+  color: #b61d1d; }
+
+.banBot p img {
+  margin-right: 5px; }
+
+.userLogin {
+  width: 306px;
+  height: 283px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 20px;
+  display: none; }
+
+.loginBox1 {
+  position: relative;
+  width: 306px;
+  height: 40px;
+  border: 1px solid #bdbdbd;
+  margin-bottom: 20px;
+  margin-top: 33px; }
+
+.loginBox1 input {
+  line-height: 18px;
+  height: 18px;
+  border: 0;
+  padding: 10px 0 10px 50px;
+  width: 254px;
+  float: none;
+  overflow: hidden;
+  font-size: 14px;
+  font-family: '\5b8b\4f53'; }
+
+.loginBox2 {
+  position: relative;
+  width: 306px;
+  height: 40px;
+  border: 1px solid #bdbdbd;
+  margin-bottom: 20px; }
+
+.loginBox2 input {
+  line-height: 18px;
+  height: 18px;
+  border: 0;
+  padding: 10px 0 10px 50px;
+  width: 254px;
+  float: none;
+  overflow: hidden;
+  font-size: 14px;
+  font-family: '\5b8b\4f53'; }
+
+.lable1 {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 38px;
+  height: 38px;
+  border-right: 1px solid #bdbdbd;
+  background: url(img/login-pic1.jpg) no-repeat; }
+
+.lable2 {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 38px;
+  height: 38px;
+  border-right: 1px solid #bdbdbd;
+  background: url(img/login-pic2.jpg) no-repeat; }
+
+.logPass {
+  color: #666666;
+  float: right;
+  width: 52px;
+  /* display: block; */
+  /* height: 58px;
+    line-height: 58px; */ }
+
+.logBtn {
+  width: 304px;
+  height: 32px;
+  background-color: #e4393c;
+  text-align: center;
+  line-height: 32px;
+  float: left;
+  font-size: 20px;
+  color: #fff;
+  margin-top: 22px; }
+
+/* nav */
+.nav {
+  width: 990px;
+  height: 106px;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center; }
+
+.nav ul {
+  margin-top: 24px;
+  overflow: hidden;
+  margin-left: 74px; }
+
+.nav ul li {
+  float: left;
+  margin-right: 15px; }
+
+.nav ul li a {
+  color: #666; }
+
+.nav p {
+  color: #666666;
+  margin-top: 6px; }
