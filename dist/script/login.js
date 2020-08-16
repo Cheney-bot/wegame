@@ -87,7 +87,7 @@ logBtn.onclick = function () {
         return false;
     }
     ajax({
-        url: './data/login.php',
+        url: '../php/login.php',
         type: 'post',
         data: {
             type: 'login',
@@ -97,7 +97,9 @@ logBtn.onclick = function () {
         dataType: 'json',
         success: function (data) {
             var json = JSON.parse(data);
-            open('http://localhost/jd/Demo.html');
+            setTimeout(()=>{
+                open('http://localhost/wegame/dist/html/index.html');
+            },500)
 
         },
         error: function (status) {
@@ -123,7 +125,7 @@ register.onclick = function () {
         return false;
     }
     ajax({
-        url: './data/login.php',
+        url: '../php/login.php',
         type: 'post',
         data: {
             type: 'add',

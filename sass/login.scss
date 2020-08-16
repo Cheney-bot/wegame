@@ -27,7 +27,7 @@ body::after {
     margin: 0 auto;
 }
 
-.header img {
+.header>img {
     float: left;
     margin-top: 20px;
 }
@@ -46,6 +46,9 @@ body::after {
     height: 16px;
     margin-top: 54px;
     font-size: 12px;
+    img{
+        margin-top: 4px;
+    }
 }
 
 .xinxi {
@@ -201,9 +204,12 @@ body::after {
     top: -2px;
     width: 141px;
     height: 168px;
-    background: url(img/phone-orange.png) no-repeat;
+    // background: url(//wegame.gtimg.com/g.2001234-r.d4095/info/070383efc6598fe691432a6c6b2c7f28.jpg/142) no-repeat;
     z-index: 99;
-
+    img{
+        width: 141px;
+        height: 168px;
+    }
 }
 
 .banOpen {
@@ -313,7 +319,7 @@ body::after {
     width: 38px;
     height: 38px;
     border-right: 1px solid #bdbdbd;
-    background: url(img/login-pic1.jpg) no-repeat;
+    background: url(../img/login-pic1.jpg) no-repeat;
 }
 
 .lable2 {
@@ -324,7 +330,7 @@ body::after {
     width: 38px;
     height: 38px;
     border-right: 1px solid #bdbdbd;
-    background: url(img/login-pic2.jpg) no-repeat;
+    background: url(../img/login-pic2.jpg) no-repeat;
 }
 
 .logPass {

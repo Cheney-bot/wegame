@@ -190,17 +190,19 @@ $fript.keyup(function(){
   })
 
 
-//   for (i = 0; i < mySwiper.pagination.bullets.length; i++) {
-//       mySwiper.pagination.bullets[i].index = i
-//       mySwiper.pagination.bullets[i].onmouseover = function () {
-//           mySwiper.slideTo(this.index);
-//       };
-//   }
-//   for (i = 0; i < mySwiper.pagination.bullets.length; i++) {
-//       mySwiper.pagination.bullets[i].onmouseover = function () {
-//           this.click();
-//       };
-//   }
+  // for (i = 0; i < mySwiper.pagination.bullets.length; i++) {
+  //     mySwiper.pagination.bullets[i].index = i
+  //     mySwiper.pagination.bullets[i].onmouseover = function () {
+  //         mySwiper.slideTo(this.index);
+  //     };
+  // }
+
+
+  // var $swi = $('.swiper-pagination-customs');
+  // $swi.mouseenter(function(){
+  //   $(this).addClass('swiper-pagination-customs-active')
+  //   $(this).click();
+  // })
 
 
 
