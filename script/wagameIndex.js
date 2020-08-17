@@ -24,7 +24,11 @@ function offset(dom, bool) {
 
 }
 
-
+/* 头部登录 */
+var $loginBtn = $('.widget-header-login-btn');
+$loginBtn.click(function(){
+  // open('')
+})
 
 
 
@@ -72,6 +76,31 @@ $fript.keyup(function(){
     }
   })
 })
+
+
+
+/* 右侧购物车 */
+var $shopCar = $('.shop-car');
+var $backtop = $('.backtop');
+
+window.onscroll = function(){
+  if (document.documentElement.scrollTop>= document.documentElement.clientHeight){
+      $backtop.slideDown(500);
+  }else{
+    $backtop.slideUp(500);
+  }
+}
+$backtop.click(function(){
+  $(document.documentElement).animate({
+    scrollTop:0
+  });
+})
+
+
+
+
+
+
 
 
 
@@ -477,7 +506,6 @@ $('.rank-botCont').on('mouseenter', '.rank-littleBox', function(){
     });
   },300)
 
-  console.log(1111);
 });
 
 $('.rank-botCont').on('mouseleave', '.rank-littleBox', function () {

@@ -86,6 +86,28 @@ $banBox.mouseleave(function () {
 
 
 
+
+/* 右侧购物车 */
+var $shopCar = $('.shop-car');
+var $backtop = $('.backtop');
+
+window.onscroll = function () {
+    if (document.documentElement.scrollTop >= document.documentElement.clientHeight) {
+        $backtop.slideDown(500);
+    } else {
+        $backtop.slideUp(500);
+    }
+}
+$backtop.click(function () {
+    $(document.documentElement).animate({
+        scrollTop: 0
+    });
+})
+
+
+
+
+
 /* 初始化页面 */
 
 var typeFlag = 'faddish';
@@ -116,31 +138,60 @@ function autoAjax(){
             $('.tip-numbers').text(json.total);
             var newDom = '';    
             $.each(json.data, function (index, item) {
-                newDom += `
-                    <li>
-                           <a class = "figure" href = "http://localhost/wegame/dist/html/details.html" >
-                                <img src="${item.src}" alt="迷失岛3宇宙的尘埃">
-                            </a>
-                            <div class="game-box">
-                                <div class="game-table">
-                                    <div class="game-desc">
-                                        <h3>${item.title}</h3>
-                                        <div class="game-subtit">
-                                            <span>${item.online}</span>
-                                            <h6>${item.tuijian}</h6>
-                                        </div>
-                                        <div class="game-bot">
-                                            <a href="javascript:;">${item.a1}</a>
-                                            <a href="javascript:;">${item.a2}</a>
-                                            <a href="javascript:;">${item.a3}</a>
-                                            <a href="javascript:;">${item.a4}</a>
+                 if (index < 3) {
+                     newDom += `
+                        <li>
+                            <a class="figure" href="http://localhost/wegame/dist/html/details.html?product_id=${index+1}" >
+                                    <img src="${item.src}" alt="迷失岛3宇宙的尘埃">
+                                </a>
+                                <div class="game-box">
+                                    <div class="game-table">
+                                        <div class="game-desc">
+                                            <h3>${item.title}</h3>
+                                            <div class="game-subtit">
+                                                <span>${item.online}</span>
+                                                <h6>${item.tuijian}</h6>
+                                            </div>
+                                            <div class="game-bot">
+                                                <a href="javascript:;">${item.a1}</a>
+                                                <a href="javascript:;">${item.a2}</a>
+                                                <a href="javascript:;">${item.a3}</a>
+                                                <a href="javascript:;">${item.a4}</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                
-                `
+                            </li>
+                        </a>
+                    `
+                 } else {
+                     newDom += `
+                        <li>
+                            <a class = "figure" href = "http://localhost/wegame/dist/html/details.html?product_id=3" >
+                                    <img src="${item.src}" alt="迷失岛3宇宙的尘埃">
+                                </a>
+                                <div class="game-box">
+                                    <div class="game-table">
+                                        <div class="game-desc">
+                                            <h3>${item.title}</h3>
+                                            <div class="game-subtit">
+                                                <span>${item.online}</span>
+                                                <h6>${item.tuijian}</h6>
+                                            </div>
+                                            <div class="game-bot">
+                                                <a href="javascript:;">${item.a1}</a>
+                                                <a href="javascript:;">${item.a2}</a>
+                                                <a href="javascript:;">${item.a3}</a>
+                                                <a href="javascript:;">${item.a4}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </a>
+                    `
+                 }
+
             })
             $('.game-list').append(newDom);
         }
@@ -172,31 +223,58 @@ function ajaxType(type) {
             $('.all-numbers').text(json.total);
             var newDom = '';
             $.each(json.data, function (index, item) {
-                newDom += `
-                    <li>
-                           <a class = "figure" href="http://localhost/wegame/dist/html/details.html" >
-                                <img src="${item.src}" alt="迷失岛3宇宙的尘埃">
-                            </a>
-                            <div class="game-box">
-                                <div class="game-table">
-                                    <div class="game-desc">
-                                        <h3>${item.title}</h3>
-                                        <div class="game-subtit">
-                                            <span>${item.online}</span>
-                                            <h6>${item.tuijian}</h6>
-                                        </div>
-                                        <div class="game-bot">
-                                            <a href="javascript:;">${item.a1}</a>
-                                            <a href="javascript:;">${item.a2}</a>
-                                            <a href="javascript:;">${item.a3}</a>
-                                            <a href="javascript:;">${item.a4}</a>
+                if(index < 3){
+                    newDom += `
+                        <li>
+                            <a class = "figure" href = "http://localhost/wegame/dist/html/details.html?product_id=${index+1}" >
+                                    <img src="${item.src}" alt="迷失岛3宇宙的尘埃">
+                                </a>
+                                <div class="game-box">
+                                    <div class="game-table">
+                                        <div class="game-desc">
+                                            <h3>${item.title}</h3>
+                                            <div class="game-subtit">
+                                                <span>${item.online}</span>
+                                                <h6>${item.tuijian}</h6>
+                                            </div>
+                                            <div class="game-bot">
+                                                <a href="javascript:;">${item.a1}</a>
+                                                <a href="javascript:;">${item.a2}</a>
+                                                <a href="javascript:;">${item.a3}</a>
+                                                <a href="javascript:;">${item.a4}</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
+                            </li>
+                    `
+                }else{
+                    newDom += `
+                        <li>
+                            <a class = "figure"  href = "http://localhost/wegame/dist/html/details.html?product_id=3" >
+                                    <img src="${item.src}" alt="迷失岛3宇宙的尘埃">
+                                </a>
+                                <div class="game-box">
+                                    <div class="game-table">
+                                        <div class="game-desc">
+                                            <h3>${item.title}</h3>
+                                            <div class="game-subtit">
+                                                <span>${item.online}</span>
+                                                <h6>${item.tuijian}</h6>
+                                            </div>
+                                            <div class="game-bot">
+                                                <a href="javascript:;">${item.a1}</a>
+                                                <a href="javascript:;">${item.a2}</a>
+                                                <a href="javascript:;">${item.a3}</a>
+                                                <a href="javascript:;">${item.a4}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                    `
+                }
                 
-                `
             })
             $('.game-list').append(newDom);
         }
@@ -262,7 +340,7 @@ function load(index) {
             $.each(json.data,function(index,item){
                 newDom += `
                     <li>
-                           <a class="figure" href = "http://localhost/wegame/dist/html/details.html" >
+                           <a class = "figure" href = "http://localhost/wegame/dist/html/details.html?product_id=${index+1}" >
                                 <img src="${item.src}" alt="迷失岛3宇宙的尘埃">
                             </a>
                             <div class="game-box">

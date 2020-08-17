@@ -169,6 +169,106 @@ body::after {
 }
 
 
+/* 右侧定位回到顶部 */
+.shop {
+    position: fixed;
+    background: #fff;
+    box-shadow: none;
+    border-radius: 54px;
+    bottom: 80px;
+    right: 20px;
+    width: 54px;
+    min-height: 54px;
+    z-index: 150;
+    box-sizing: border-box;
+}
+
+.shop-car {
+    width: 54px;
+    height: 54px;
+    text-align: center;
+    line-height: 54px;
+    position: relative;
+    cursor: pointer;
+
+    p {
+        position: absolute;
+        color: #3c3c3c;
+        min-width: 50px;
+        right: 105%;
+        top: 6px;
+        font-size: 12px;
+        line-height: 38px;
+        text-align: center;
+        opacity: 0;
+        transition: all .15s ease-out;
+        padding: 0 6px;
+        pointer-events: none;
+        background: #fff;
+        box-sizing: border-box;
+        border: 1px solid #c2c2c2;
+        border-radius: 5px;
+
+        span {
+            position: absolute;
+            width: 8px;
+            height: 14px;
+            background: url(../img/shop-jian.jpg) no-repeat center;
+            right: -7px;
+            top: 10px;
+        }
+    }
+
+    &:hover p {
+        opacity: 1;
+    }
+}
+
+.backtop {
+    width: 54px;
+    height: 54px;
+    text-align: center;
+    line-height: 54px;
+    position: relative;
+    display: none;
+    cursor: pointer;
+
+    p {
+        position: absolute;
+        color: #3c3c3c;
+        min-width: 70px;
+        right: 105%;
+        top: 6px;
+        font-size: 12px;
+        line-height: 38px;
+        text-align: center;
+        opacity: 0;
+        transition: all .15s ease-out;
+        padding: 0 6px;
+        pointer-events: none;
+        background: #fff;
+        box-sizing: border-box;
+        border: 1px solid #c2c2c2;
+        border-radius: 5px;
+
+        span {
+            position: absolute;
+            width: 8px;
+            height: 14px;
+            background: url(../img/shop-jian.jpg) no-repeat center;
+            right: -7px;
+            top: 10px;
+        }
+    }
+
+    &:hover p {
+        opacity: 1;
+    }
+}
+
+
+
+
 
 
 /* fr-wrapper */
@@ -818,6 +918,12 @@ body::after {
         z-index: 31;
         background-color: #f4f4f4;
     }
+}
+.figureWrap{
+    display: inline-block;
+    width: 700px;
+    height: 102px;
+    overflow: hidden;
 }
 .figure{
     width: 180px;

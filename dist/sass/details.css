@@ -156,12 +156,21 @@ body::after {
   height: 243px;
   overflow: hidden;
   position: relative;
-  background: url(../img/detailTitle.jpg) no-repeat top #fff; }
+  background: #fff;
+  margin-bottom: 20px; }
 
 .title {
   width: 1000px;
   margin: 0 auto;
   height: 243px; }
+
+.tit-back {
+  position: absolute;
+  width: 100%;
+  height: 193px;
+  z-index: 1;
+  top: 0;
+  left: 0; }
 
 .title-top {
   width: 1000px;
@@ -171,7 +180,11 @@ body::after {
 .tit-crumb {
   width: 1000px;
   height: 72px;
-  color: #a29d96; }
+  color: #a29d96;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  z-index: 10; }
   .tit-crumb p {
     font-size: 14px;
     line-height: 72px; }
@@ -179,11 +192,14 @@ body::after {
       margin: 0 5px; }
 
 .title-name {
-  position: relative;
+  position: absolute;
   width: 1000px;
   height: 78px;
   padding-left: 135px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  top: 70px;
+  left: 0;
+  z-index: 10; }
   .title-name img {
     width: 105px;
     height: 150px;
@@ -249,8 +265,118 @@ body::after {
 .fr-mainLeft {
   width: 700px;
   height: 470px;
-  float: left;
-  background: pink; }
+  float: left; }
+
+.video-box {
+  width: 700px;
+  height: 394px;
+  overflow: hidden; }
+
+.video-cont {
+  width: 10000px;
+  overflow: hidden;
+  height: 394px; }
+
+.video-item {
+  width: 700px;
+  height: 394px;
+  overflow: hidden;
+  float: left; }
+  .video-item img {
+    width: 700px; }
+
+.video-ban {
+  width: 700px;
+  height: 76px;
+  overflow: hidden;
+  background: #212121; }
+
+.video-banBox {
+  width: 700px;
+  height: 76px;
+  overflow: hidden;
+  position: relative; }
+
+.video-pre {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 76px;
+  background: url(../img/video-leftj.png) no-repeat center;
+  cursor: pointer; }
+
+.video-next {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 76px;
+  background: url(../img/video-rightj.png) no-repeat center; }
+
+.video-show {
+  border: 2px solid #fff; }
+
+.video-ulbox {
+  width: 620px;
+  height: 76px;
+  overflow: hidden;
+  position: absolute;
+  left: 40px;
+  top: 0;
+  padding: 10px 0;
+  box-sizing: border-box; }
+
+.video-ul {
+  width: 5000px;
+  height: 76px; }
+  .video-ul li {
+    cursor: pointer;
+    float: left;
+    width: 98px;
+    height: 56px;
+    border-radius: 2px;
+    margin-right: 6px;
+    position: relative;
+    opacity: .4;
+    transition: all .8s; }
+    .video-ul li span {
+      z-index: 10;
+      content: "";
+      position: absolute;
+      left: 50%;
+      margin-left: -8px;
+      display: none;
+      width: 0;
+      height: 0;
+      border: 8px solid;
+      font-size: 0;
+      border-color: transparent transparent #fff;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      top: -17px;
+      box-sizing: border-box; }
+    .video-ul li:hover {
+      opacity: 1; }
+    .video-ul li img {
+      width: 98px; }
+
+.video-ul .video-pos::after {
+  box-sizing: border-box;
+  cursor: pointer;
+  content: "";
+  display: block;
+  z-index: 11;
+  width: 64px;
+  height: 64px;
+  background: url(../img/video-play.png) no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -32px 0 0 -32px;
+  z-index: 20;
+  opacity: 1; }
 
 .fr-mainRight {
   float: right;
@@ -365,13 +491,96 @@ body::after {
   .quietDown a {
     color: #fff; }
 
+/* 右侧定位回到顶部 */
+.shop {
+  position: fixed;
+  background: #fff;
+  box-shadow: none;
+  border-radius: 54px;
+  bottom: 80px;
+  right: 20px;
+  width: 54px;
+  min-height: 54px;
+  z-index: 150;
+  box-sizing: border-box; }
+
+.shop-car {
+  width: 54px;
+  height: 54px;
+  text-align: center;
+  line-height: 54px;
+  position: relative;
+  cursor: pointer; }
+  .shop-car p {
+    position: absolute;
+    color: #3c3c3c;
+    min-width: 50px;
+    right: 105%;
+    top: 6px;
+    font-size: 12px;
+    line-height: 38px;
+    text-align: center;
+    opacity: 0;
+    transition: all .15s ease-out;
+    padding: 0 6px;
+    pointer-events: none;
+    background: #fff;
+    box-sizing: border-box;
+    border: 1px solid #c2c2c2;
+    border-radius: 5px; }
+    .shop-car p span {
+      position: absolute;
+      width: 8px;
+      height: 14px;
+      background: url(../img/shop-jian.jpg) no-repeat center;
+      right: -7px;
+      top: 10px; }
+  .shop-car:hover p {
+    opacity: 1; }
+
+.backtop {
+  width: 54px;
+  height: 54px;
+  text-align: center;
+  line-height: 54px;
+  position: relative;
+  display: none;
+  cursor: pointer; }
+  .backtop p {
+    position: absolute;
+    color: #3c3c3c;
+    min-width: 70px;
+    right: 105%;
+    top: 6px;
+    font-size: 12px;
+    line-height: 38px;
+    text-align: center;
+    opacity: 0;
+    transition: all .15s ease-out;
+    padding: 0 6px;
+    pointer-events: none;
+    background: #fff;
+    box-sizing: border-box;
+    border: 1px solid #c2c2c2;
+    border-radius: 5px; }
+    .backtop p span {
+      position: absolute;
+      width: 8px;
+      height: 14px;
+      background: url(../img/shop-jian.jpg) no-repeat center;
+      right: -7px;
+      top: 10px; }
+  .backtop:hover p {
+    opacity: 1; }
+
 /* 特惠合辑 */
 .pretty {
   width: 1000px;
   min-height: 300px;
   margin: 0 auto;
   position: relative;
-  margin-top: 24px; }
+  margin-top: 24px;
+  overflow: hidden; }
 
 /* 特惠合辑左侧 */
 .pretty-left {
@@ -490,7 +699,7 @@ body::after {
       .pretty-cont1-ul ul li img {
         transition: all .6s;
         transform: scale(1) translateZ(0);
-        width: 107px; }
+        height: 60px; }
       .pretty-cont1-ul ul li .pretty-position {
         left: -3px;
         top: -3px;
@@ -546,6 +755,8 @@ body::after {
   line-height: 1.8;
   overflow: hidden;
   background: #fff; }
+  .pretty-cont3-main img {
+    max-width: 640px; }
 
 .ql-indent-1 {
   line-height: 1.8;
@@ -672,6 +883,12 @@ body::after {
       text-decoration: underline; }
 
 /* 底部 */
+.bottomWrap {
+  width: 100%;
+  height: 310px;
+  padding-top: 20px;
+  box-sizing: border-box; }
+
 .footWrap {
   width: 100%;
   height: 290px;
