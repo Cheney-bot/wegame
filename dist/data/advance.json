@@ -1,0 +1,82 @@
+[
+    {
+        "month":"8月",
+        "date": "8月11日",
+        "img": "../img/redian-pic1.jpg",
+        "title": "新换装免费送",
+        "disc": "新征战天下登场",
+        "type": "游戏"
+    },
+    {
+        "month": "8月",
+        "date": "高清竞技大区",
+        "img": "../img/redian-pic2.jpg",
+        "title": "CFHD",
+        "disc": "立即预约",
+        "type": "活动"
+    },
+    {
+        "month": "8月",
+        "date": "自由的RPG世界",
+        "img": "../img/redian-pic3.jpg",
+        "title": "最终幻想14",
+        "disc": "咸鱼大哥，5.21快来啦",
+        "type": "游戏"
+    },
+    {
+        "month": "8月",
+        "date": "8月11日",
+        "img": "../img/redian-pic4.jpg",
+        "title": "枪火重生",
+        "disc": "预约抽免单资格",
+        "type": "活动"
+    },
+    {
+        "month": "8月",
+        "date": "独家发售",
+        "img": "../img/redian-pic5.jpg",
+        "title": "一路",
+        "disc": "即将上线！",
+        "type": "游戏"
+    },
+    {
+        "month": "9月1日",
+        "date": "即将上线",
+        "img": "../img/redian-pic6.jpg",
+        "title": "铁甲雄兵",
+        "disc": "铁木真登场",
+        "type": "游戏"
+    },
+    {
+        "month": "9月15",
+        "date": "我有一剑，剑来",
+        "img": "../img/redian-pic7.jpg",
+        "title": "剑灵",
+        "disc": "体验领套装",
+        "type": "活动"
+    },
+    {
+        "month": "9月",
+        "date": "9月20日",
+        "img": "../img/redian-pic8.jpg",
+        "title": "FIFA Online 4",
+        "disc": "新兵集结",
+        "type": "游戏"
+    },
+    {
+        "month": "10月1日",
+        "date": "国庆节同步上线",
+        "img": "../img/redian-pic9.jpg",
+        "title": "奇奥英雄传",
+        "disc": "新地图新卡牌！",
+        "type": "游戏"
+    },
+    {
+        "month": "10月10日",
+        "date": "开启新赛季",
+        "img": "../img/redian-pic10.jpg",
+        "title": "迷你世界",
+        "disc": "变形金刚官方授权皮肤",
+        "type": "游戏"
+    }
+]

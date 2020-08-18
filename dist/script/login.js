@@ -82,8 +82,16 @@ if (getCookie('username')) {
     ipt1.value = getCookie('username');
     ipt2.value = getCookie('password');
 }
+ipt1.onblur = function(){
+    var reg = /[0-9 | a-z | A-Z]{8,16}/ig;
+    if(!reg.test(ipt1.value)){
+        alert('用户名智能为数字和字母,且长度为8~16');
+    }
+
+}
 logBtn.onclick = function () {
     if (ipt1.value == '' || ipt2.value == '') {
+        alert('输入框不能为空!');
         return false;
     }
     ajax({
@@ -97,10 +105,13 @@ logBtn.onclick = function () {
         dataType: 'json',
         success: function (data) {
             var json = JSON.parse(data);
-            setTimeout(()=>{
-                open('http://localhost/wegame/dist/html/index.html');
-            },500)
-
+            if (json.msg == "登录成功"){
+                setTimeout(() => {
+                    open('http://localhost/wegame/dist/html/index.html');
+                }, 500)
+            }else{
+                alert(json.msg);
+            }
         },
         error: function (status) {
             alert(status + '登录失败');

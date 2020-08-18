@@ -2,6 +2,7 @@ body,
 html {
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
 /* body */
@@ -410,6 +411,44 @@ body::after {
     }
 }
 
+
+
+.bigWrap {
+    width: 1250px;
+    height: 800px;
+    position: fixed;
+    top: 0;
+    left: 50px;
+    background: #191919;
+    z-index: 1000;
+    display: none;
+}
+.swiper-container{
+    width: 1250px;
+    height: 649px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1001;
+    img{
+        width: 1154px;
+        height: 649px;
+        position: absolute;
+        left: 50px;
+        top: 50px;
+        z-index: 2000;
+    }
+}
+.big-close{
+    cursor: pointer;
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    z-index: 10000;
+    background: url(../img/detalis-close.png)no-repeat 0 0;
+}
 .video-ul .video-pos::after {
     box-sizing: border-box;
     cursor: pointer;
@@ -527,29 +566,144 @@ body::after {
 }
 
 .btn-get-cougon{
-    cursor: pointer;
-    margin: 10px 0 8px;
-    width: 100%;
-    height: 44px;
-    box-sizing: border-box;
+    border: 1px solid rgba(246, 156, 0, .5);
+    border-radius: 2px;
+    background-color: #fef5e5;
+    padding: 5px 10px;
+    color: #757575;
+    position: relative;
+    margin-bottom: 12px;
+
+}
+.box-arc{
+    font-size: 13px;
+    color: #f69c00;
+    font-weight: 700;
+    line-height: 21px;
+    max-width: 190px;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 40px;
     overflow: hidden;
-    transition: all .6s;
-    &:hover{
-        opacity: 0.5;
+}
+.box-info{
+    min-height: 26px;
+    color: #757575;
+    margin-bottom: 6px;
+    .price-box1{
+        vertical-align: middle;
+        min-height: 26px;
+        display: inline-block;
+        padding: 0 8px 0 0;
+        box-sizing: border-box;
     }
 }
-.quietDown{
+.price-tag{
+    font-size: 14px;
+    color: #fff;
+    background-color: #ff6f00;
+    border-radius: 2px;
+    margin-right: 4px;
+    min-width: 50px;
+    text-align: center;
+    padding: 0 6px;
+    font-weight: 700;
+    height: 23px;
+    line-height: 23px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.price-val{
+    display: inline-block;
+    vertical-align: middle;
+    .price-new{
+        font-weight: 700;
+        height: 23px;
+        line-height: 23px;
+        display: inline-block;
+        vertical-align: middle;
+        color: #ff6f00;
+        font-size: 16px;
+        letter-spacing: -.5px;
+        padding: 0 4px;
+        box-sizing: border-box;
+        i{
+            font-size: 14px;
+            font-weight: 400;
+            display: inline-block;
+            padding-right: 2px;
+            box-sizing: border-box;
+        }
+    }
+    .price-old{
+        text-align: left;
+        display: inline-block;
+        vertical-align: middle;
+        height: 23px;
+        line-height: 23px;
+        color: #757575;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+}
+
+.group{
     position: relative;
     min-height: 48px;
-    text-align: center;
-    font-size: 18px;
-    background: #3b9cff;
-    font-weight: bold;
-    line-height: 48px;
-    a{
-        color: #fff;
+    .buy{
+        transition: background-color .2s ease-in,
+        border-color .2s ease-in;
+        background: #ffca28;
+        cursor: pointer;
+        color: #000;
+        border: none;
+        text-align: center;
+        display: block;
+        width: 100%;
+        height: 48px;
+        line-height: 48px;
+        font-size: 17px;
+        border-radius: 2px;
+        font-weight: 700;
+        padding: 0 10px;
+        box-sizing: border-box;
+        &:hover{
+            background: #edbc25;
+            color: #000;
+            border: none;
+        }
     }
 }
+.shopCar{
+    width: 54px;
+    height: 48px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    font-size: 0;
+    background-color: #efb70c;
+    transition: background-color .2s ease-in;
+    &::after{
+        content: "";
+        width: 28px;
+        height: 28px;
+        background: url(../img/shopcar.png) no-repeat 0 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -14px 0 0 -14px;
+        box-sizing: border-box;
+    }
+    &:hover{
+        background-color: #deaa0b;
+    }
+}
+
+
 
 
 

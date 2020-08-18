@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="../img/title.jpg" type="image/x-icon">
     <link rel="stylesheet" href="../sass/reset.css">
     <link rel="stylesheet" href="../sass/details.css">
+    <link rel="stylesheet" href="../sass/swiper-bundle.css">
 </head>
 <body>
 
@@ -84,22 +85,6 @@
                     <div class="video-item">
                         <video src="../video/jizhan.mp4" class="video" controls width="700px" height="394px" autoplay
                             preload="metadata"></video>
-                    </div>
-                    <div class="video-item">
-                        <video src="../video/jizhan.mp4" class="video" controls width="700px" height="394px" autoplay
-                            preload="metadata"></video>
-                    </div>
-                    <div class="video-item">
-                        <img src="../img/video-pic1.jpg" alt="">
-                    </div>
-                    <div class="video-item">
-                        <img src="../img/video-pic2.jpg" alt="">
-                    </div>
-                    <div class="video-item">
-                        <img src="../img/video-pic3.jpg" alt="">
-                    </div>
-                    <div class="video-item">
-                       <img src="../img/video-pic4.jpg" alt="">
                     </div> -->
                 </div>
             </div>
@@ -115,27 +100,7 @@
                             <li class="video-pos">
                                 <span></span>
                                 <img src="../img/video-li2.jpg" alt="">
-                            </li>
-                            <li class="video-pos">
-                                <span></span>
-                                <img src="../img/video-li3.jpg" alt="">
-                            </li>
-                            <li>
-                                <span></span>
-                                <img src="../img/video-pic1.jpg" alt="">
-                            </li>
-                            <li>
-                                <span></span>
-                                <img src="../img/video-pic2.jpg" alt="">
-                            </li>
-                            <li>
-                                <span></span>
-                                <img src="../img/video-pic3.jpg" alt="">
-                            </li>
-                            <li>
-                                <span></span>
-                                <img src="../img/video-pic4.jpg" alt="">
-                            </li> -->
+                            </li>-->
                         </ul>
                     </div>
                     <p class="video-next"></p>
@@ -201,15 +166,38 @@
             </div>
             <div class="fr-rightBot">
                 <div class="btn-get-cougon">
-                    <img src="../img/get-cougon.png" alt="">
+                    <div class="box-arc">
+                        APP微信QQ支付低至
+                        <span>￥17.46</span>
+                    </div>
                 </div>
-                <div class="quietDown">
-                    <a href="http://gw2.kongzhong.com/festival/four_winds/">立即下载</a>
+                <div class="box-info">
+                    <div class="price-box1">
+                        <span class="price-tag">6.4折</span>
+                        <div class="price-val">
+                            <span class="price-new">
+                                <i>￥</i>
+                                18
+                            </span>
+                            <span class="price-old">
+                                <i>￥</i>
+                                <del>28</del>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group">
+                    <div class="subgroup">
+                        <a class="buy" href="javascript:;"><span>立即购买</span></a>
+                        <!-- <div class="shopCar" code="abc"></div> -->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    
 
 
     <!-- 特惠合辑 -->
@@ -479,6 +467,22 @@
             </div>
     </div>
 
+
+
+    <!-- 点击图片放大 -->
+    <div class="bigWrap">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../img/big1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="../img/big2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="../img/big3.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="../img/big4.jpg" alt=""></div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <span class="big-close"></span>
+    </div>
 
     <script src="../script/utils.js"></script>
     <script src="../script/jquery-1.8.3.js"></script>

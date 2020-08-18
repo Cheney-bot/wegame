@@ -136,6 +136,9 @@ if (getQueryString("product_id") == 1){
                                         src="${json[0].detailsImg}">
                                 </p>`;
             $('.pretty-cont3-main').append(detailsImg);
+            var code = `<div class="shopCar" code="${json[0].code}"></div>`
+            $('.subgroup').append(code);
+
             var detailsCon = '';
             $.each(json[0].detailsCon,function(index,item){
                 detailsCon+=`
@@ -151,7 +154,7 @@ if (getQueryString("product_id") == 1){
     })
 }
 
-if (getQueryString("product_id") == 2) 
+if (getQueryString("product_id") == 2) {
     $.ajax({
         url: "../data/details.json",
         type: 'get',
@@ -182,6 +185,8 @@ if (getQueryString("product_id") == 2)
                 }
             })
             $('.video-cont').append(videoItem);
+            var code = `<div class="shopCar" code="${json[1].code}"></div>`
+            $('.subgroup').append(code);
             var videoli = '';
             $.each(json[1].littleImg, function (index, item) {
                 if (index <= 2) {
@@ -293,8 +298,8 @@ if (getQueryString("product_id") == 2)
             $('.pretty-cont3-main').append(detailsCon);
         }
     })
-
-if (getQueryString("product_id") == 3)
+}
+if (getQueryString("product_id") == 3){
     $.ajax({
         url: "../data/details.json",
         type: 'get',
@@ -325,6 +330,8 @@ if (getQueryString("product_id") == 3)
                 }
             })
             $('.video-cont').append(videoItem);
+            var code = `<div class="shopCar" code="${json[2].code}"></div>`
+            $('.subgroup').append(code);
             var videoli = '';
             $.each(json[2].littleImg, function (index, item) {
                 if (index <= 2) {
@@ -437,7 +444,7 @@ if (getQueryString("product_id") == 3)
             $('.pretty-cont3-main').append(detailsCon);
         }
     })
-
+}
 
 
 
@@ -542,4 +549,64 @@ $('.video-ul').on('click','li',function(){
     }, function () {
         _this.find('span').css('display', 'block');
     })
+})
+
+
+
+var mySwiper = new Swiper('.swiper-container', {
+      direction: 'horizontal', // 垂直切换选项
+      loop: true, // 循环模式选项
+      autoplay:{
+          disableOnInteraction: false,
+      },
+      effect: 'fade',
+
+      // 如果需要前进后退按钮
+      navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+      }
+
+  })
+
+
+ $('.video-cont').on("click", '.video-item',function(){
+   $('.bigWrap').fadeIn(500);
+
+}) 
+$('.big-close').click(function () {
+    $('.bigWrap').fadeOut(500);
+})
+
+
+
+
+//加入购物车
+$('.group').on('click', '.shopCar',function(){
+    var goodsArr = [];
+    if (localStorage.getItem('goods')) {
+        goodsArr = JSON.parse(localStorage.getItem('goods'));
+
+    }
+    //获取当前的code
+    var code = $(this).attr('code');
+    //获取标识码
+    var flag = false;
+    $.each(goodsArr, function (index, item) {
+        if (item.code === code) {
+            item.num++;
+            flag = true;
+            return false;
+        }
+
+    })
+    if (!flag) {
+        goodsArr.push({
+            "code": code,
+            "num": 1
+        });
+    }
+    localStorage.setItem('goods', JSON.stringify(goodsArr));
+    alert('添加成功')
+
 })

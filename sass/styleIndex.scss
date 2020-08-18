@@ -119,6 +119,7 @@ body::after{
     font-size: 13px;
     line-height: 34px;
     text-align: center;
+    transition: all .4s;
 }
 .login{
     display: inline-block;
@@ -634,7 +635,7 @@ body::after{
     width: 1000px;
     height: 420px;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .redianUl{
     position: absolute;
@@ -720,6 +721,9 @@ body::after{
         line-height: 40px;
         margin-left: 70px;
         font-weight: bold;
+    }
+    span{
+        display: none;
     }
 }
 

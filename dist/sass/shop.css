@@ -1,0 +1,510 @@
+@charset "UTF-8";
+body,
+html {
+  width: 100%;
+  height: 100%; }
+
+/* body */
+body::after {
+  content: "";
+  background-color: #eee;
+  background-color: var(--color-fill-page-bg);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: -100;
+  pointer-events: none;
+  background-color: #eee;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-image: url(../img/background.jpg); }
+
+.headerWrap {
+  width: 100%;
+  height: 80px;
+  background-color: #191919; }
+
+.header {
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  overflow: hidden;
+  line-height: 80px;
+  position: relative; }
+
+.logo {
+  width: 233px;
+  position: absolute;
+  top: 50%;
+  font-size: 0;
+  white-space: nowrap;
+  word-wrap: normal;
+  left: 40px;
+  height: 40px;
+  margin-top: -20px;
+  background: url(../img/logo.png) no-repeat; }
+
+.headerUl {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal; }
+
+.headerUl li {
+  /* float: left; */
+  margin: 0 12px;
+  display: inline-block; }
+
+.headerUl .cur {
+  background-color: #353535; }
+
+.headerUl .cur a {
+  color: #fff; }
+
+.headerUl li a {
+  position: relative;
+  display: block;
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 80px;
+  color: rgba(255, 255, 255, 0.5); }
+
+.headerUl a:hover {
+  color: #fff; }
+
+/* header-right */
+.header-right {
+  position: absolute;
+  top: 0;
+  right: 40px;
+  height: 100%;
+  padding: 22px 0;
+  font-size: 0;
+  white-space: nowrap;
+  word-wrap: normal;
+  box-sizing: border-box;
+  margin-top: -20px; }
+
+.header-right::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  vertical-align: middle; }
+
+.widget-header-dev {
+  display: inline-block;
+  height: 36px;
+  padding: 0;
+  margin-left: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  line-height: 36px;
+  vertical-align: middle; }
+
+.xiazai {
+  display: inline-block;
+  height: 36px;
+  padding: 0 18px;
+  margin-left: 20px;
+  vertical-align: middle;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  color: rgba(255, 255, 255, 0.5);
+  white-space: nowrap;
+  font-size: 13px;
+  line-height: 34px;
+  text-align: center; }
+
+.login {
+  display: inline-block;
+  height: 36px;
+  vertical-align: middle; }
+
+.widget-header-login-btn {
+  display: inline-block;
+  height: 36px;
+  padding: 0;
+  margin-left: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  line-height: 36px;
+  vertical-align: top; }
+
+.widget-header-dev:hover {
+  background: none;
+  color: #fff; }
+
+.xiazai:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background-color: #ffc800;
+  color: #333; }
+
+.widget-header-login-btn:hover {
+  background: none;
+  color: #fff; }
+
+/* 右侧定位回到顶部 */
+.shop {
+  position: fixed;
+  background: #fff;
+  box-shadow: none;
+  border-radius: 54px;
+  bottom: 80px;
+  right: 20px;
+  width: 54px;
+  min-height: 54px;
+  z-index: 150;
+  box-sizing: border-box; }
+
+.shop-car {
+  width: 54px;
+  height: 54px;
+  text-align: center;
+  line-height: 54px;
+  position: relative;
+  cursor: pointer; }
+  .shop-car p {
+    position: absolute;
+    color: #3c3c3c;
+    min-width: 50px;
+    right: 105%;
+    top: 6px;
+    font-size: 12px;
+    line-height: 38px;
+    text-align: center;
+    opacity: 0;
+    transition: all .15s ease-out;
+    padding: 0 6px;
+    pointer-events: none;
+    background: #fff;
+    box-sizing: border-box;
+    border: 1px solid #c2c2c2;
+    border-radius: 5px; }
+    .shop-car p span {
+      position: absolute;
+      width: 8px;
+      height: 14px;
+      background: url(../img/shop-jian.jpg) no-repeat center;
+      right: -7px;
+      top: 10px; }
+  .shop-car:hover p {
+    opacity: 1; }
+
+.backtop {
+  width: 54px;
+  height: 54px;
+  text-align: center;
+  line-height: 54px;
+  position: relative;
+  display: none;
+  cursor: pointer; }
+  .backtop p {
+    position: absolute;
+    color: #3c3c3c;
+    min-width: 70px;
+    right: 105%;
+    top: 6px;
+    font-size: 12px;
+    line-height: 38px;
+    text-align: center;
+    opacity: 0;
+    transition: all .15s ease-out;
+    padding: 0 6px;
+    pointer-events: none;
+    background: #fff;
+    box-sizing: border-box;
+    border: 1px solid #c2c2c2;
+    border-radius: 5px; }
+    .backtop p span {
+      position: absolute;
+      width: 8px;
+      height: 14px;
+      background: url(../img/shop-jian.jpg) no-repeat center;
+      right: -7px;
+      top: 10px; }
+  .backtop:hover p {
+    opacity: 1; }
+
+.top {
+  width: 990px;
+  height: 80px;
+  margin: 0 auto;
+  overflow: hidden; }
+
+.top img {
+  margin-top: 20px;
+  float: left; }
+
+.top h2 {
+  float: left;
+  margin-left: 24px;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333333; }
+
+/* allGoods */
+.allGoods {
+  width: 990px;
+  height: 37px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 10px; }
+
+.allGoods h3 {
+  float: left;
+  color: #e2231a;
+  font-size: 16px;
+  height: 37px;
+  line-height: 37px;
+  border-bottom: 1px solid #e2231a;
+  position: relative;
+  z-index: 100;
+  box-sizing: border-box; }
+
+.allGoods p {
+  float: right;
+  color: #666666;
+  margin-top: 8px; }
+
+.allGood input {
+  float: right;
+  width: 172px;
+  height: 23px;
+  border: 1px solid #cecbce; }
+
+/* mainWrap */
+.mainWrap {
+  width: 990px;
+  overflow: hidden;
+  margin: 0 auto; }
+
+.main-top {
+  width: 978px;
+  height: 44px;
+  background-color: #f3f3f3;
+  border: 1px solid #e0e0e0;
+  line-height: 44px;
+  padding-left: 12px; }
+
+.main-top span {
+  float: left;
+  color: #666666; }
+
+.main-top input {
+  float: left;
+  margin-top: 15px; }
+
+.main-top .qx {
+  margin-right: 78px;
+  margin-left: 4px; }
+
+.main-top .sp {
+  margin-right: 446px; }
+
+.main-top .dj {
+  margin-right: 68px; }
+
+.main-top .sl {
+  margin-right: 104px; }
+
+.main-top .xj {
+  margin-right: 40px; }
+
+/* goodsWrap */
+.goodsWrap {
+  width: 978px; }
+
+.goodsBox {
+  width: 978px;
+  height: 170px;
+  overflow: hidden; }
+
+.store {
+  width: 978px;
+  height: 40px;
+  padding-left: 12px;
+  border-bottom: 2px solid #aaaaaa; }
+
+.store input {
+  float: left;
+  margin-top: 18px;
+  margin-right: 4px; }
+
+.store h2 {
+  background-color: #da0012;
+  text-align: center;
+  padding: 4px;
+  color: #fff;
+  font-size: 12px;
+  float: left;
+  margin-top: 12px; }
+
+.goodsCont {
+  width: 990px;
+  box-sizing: border-box;
+  padding-left: 40px;
+  height: 118px;
+  position: relative;
+  border-bottom: 1px solid #f1f1f1; }
+
+.checkCont {
+  position: absolute;
+  left: 12px;
+  top: 20px; }
+
+.goodsItem {
+  width: 948px;
+  height: 107px; }
+
+.goodsItem img {
+  float: left;
+  margin-top: 16px;
+  margin-right: 10px;
+  width: 80px; }
+
+.desc {
+  width: 204px;
+  float: left;
+  margin-right: 25px; }
+
+.desc p {
+  line-height: 20px;
+  color: #333333;
+  margin-top: 16px; }
+
+.desc2 {
+  width: 128px;
+  color: #666666;
+  margin-top: 16px;
+  float: left;
+  margin-right: 102px; }
+
+.unit {
+  float: left;
+  color: #333333;
+  margin-right: 40px;
+  margin-top: 20px; }
+
+.modified {
+  width: 78px;
+  height: 20px;
+  border: 1px solid #cacbcb;
+  text-align: center;
+  line-height: 20px;
+  float: left;
+  margin-top: 15px;
+  margin-right: 80px; }
+
+.subtract {
+  float: left;
+  width: 16px;
+  height: 20px;
+  border-right: 1px solid #cacbcb;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer; }
+
+.number {
+  width: 44px;
+  height: 20px;
+  float: left; }
+
+.add {
+  float: left;
+  width: 16px;
+  height: 20px;
+  border-left: 1px solid #cacbcb;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer; }
+
+.subtotal {
+  float: left;
+  color: #333333;
+  margin-top: 20px;
+  margin-right: 30px; }
+
+.attention {
+  color: #666666;
+  float: left;
+  margin-top: 20px; }
+
+.remove {
+  display: block;
+  line-height: 20px;
+  cursor: pointer; }
+
+.remove:hover {
+  color: #da0012; }
+
+.atten {
+  cursor: pointer;
+  display: block; }
+
+.atten:hover {
+  color: #da0012; }
+
+.clearCar {
+  width: 990px;
+  height: 50px;
+  margin: 0 auto;
+  border: 1px solid #f0f0f0;
+  margin-top: 20px;
+  overflow: hidden;
+  line-height: 50px;
+  color: #666; }
+
+.clearLeft {
+  float: left;
+  overflow: hidden; }
+
+.bot {
+  margin-left: 10px; }
+
+.clearAll {
+  cursor: pointer; }
+
+.deleteChosen {
+  cursor: pointer; }
+
+.clear {
+  font-weight: bold;
+  cursor: pointer; }
+
+.clearRight {
+  float: right;
+  overflow: hidden; }
+
+.clearRight p {
+  float: left; }
+
+.clearRight p .chosen {
+  color: #e2231a; }
+
+.clearRight .total {
+  float: left;
+  overflow: hidden;
+  margin-left: 10px; }
+
+.total .total-top {
+  color: #999999; }
+
+.total .total-Price {
+  color: #e2231a; }
+
+.settlement {
+  float: right;
+  height: 52px;
+  background-color: #e64347;
+  padding: 0px 20px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer; }
