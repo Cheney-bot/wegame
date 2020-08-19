@@ -3,13 +3,15 @@ $(function () {
         //获得已经存在的localStorage中的goods
         var goodsArr = JSON.parse(localStorage.getItem('goods'));
 
+
+
+
         //页面初始化
         $.ajax({
             url: '../data/goods.json',
             type: 'get',
             dataType: 'json',
             success: function (jsonArr) {
-                console.log(jsonArr);
                 $.each(goodsArr, function (index, item) {
                     $.each(jsonArr, function (index1, item1) {
                         if (item.code == item1.code) {
@@ -17,8 +19,7 @@ $(function () {
                             var newDom = `
                             <div class="goodsBox">
                                 <div class="store">
-                                    <input type="checkbox">
-                                    <h2>京东自营</h2>
+                                    <h2>Wegame</h2>
                                 </div>
                                 <div class="goodsCont">
                                     <div class="goodsItem">
@@ -29,7 +30,7 @@ $(function () {
                                             </p>
                                         </div>
                                         <div class="desc2">
-                                            演绎三国传奇
+                                            ${item1.disc}
                                         </div>
                                         <span class="unit">￥${item1.price}</span>
                                         <div class="modified">
@@ -54,8 +55,13 @@ $(function () {
                         }
                     })
                 })
+                    
             }
         })
+    }else{
+        localStorage.clear();
+        $('.goodNone').css('display', 'block');
+        
     }
 
     //全选
@@ -81,6 +87,7 @@ $(function () {
     //删除单个
     $('.goodsWrap').on('click', '.remove', function () {
         var code = $(this).attr('code');
+        
         $.each(goodsArr, function (index, item) {
             if (item.code == code) {
                 goodsArr.splice(index, 1);
@@ -91,8 +98,7 @@ $(function () {
             localStorage.setItem('goods', JSON.stringify(goodsArr));
         } else {
             localStorage.clear();
-            var dom = `<div>购物车暂无内容</div>`
-            $('.goodsWrap').append(dom);
+            $('.goodNone').css('display','block');
         }
         $(this).closest('.goodsBox').remove();
     })
@@ -139,7 +145,12 @@ $(function () {
             temporary = temporary - c;
             $('.tot').html(temporary);
         }
-
+        if (goodsArr.length > 0) {
+            localStorage.setItem('goods', JSON.stringify(goodsArr));
+        } else {
+            localStorage.clear();
+            $('.goodNone').css('display', 'block');
+        }
     })
 
 

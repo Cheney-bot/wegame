@@ -1,3 +1,4 @@
+
 if (getQueryString("product_id") == 1){
     $.ajax({
         url:"../data/details.json",
@@ -29,6 +30,21 @@ if (getQueryString("product_id") == 1){
                 }
             })
             $('.video-cont').append(videoItem);
+            var newprice = `
+                <span class="price-new">
+                    <i>￥</i>
+                    ${json[0].newprice}
+                </span>
+                <span class="price-old">
+                    <i>￥</i>
+                    <del>${json[0].oldprice}</del>
+                </span>
+            `;
+            $('.price-val').append(newprice);
+
+
+
+
             var videoli = '';
             $.each(json[0].littleImg,function(index,item){
                 if(index <= 2){
@@ -187,6 +203,17 @@ if (getQueryString("product_id") == 2) {
             $('.video-cont').append(videoItem);
             var code = `<div class="shopCar" code="${json[1].code}"></div>`
             $('.subgroup').append(code);
+            var newprice = `
+                <span class="price-new">
+                    <i>￥</i>
+                    ${json[1].newprice}
+                </span>
+                <span class="price-old">
+                    <i>￥</i>
+                    <del>${json[1].oldprice}</del>
+                </span>
+            `;
+            $('.price-val').append(newprice);
             var videoli = '';
             $.each(json[1].littleImg, function (index, item) {
                 if (index <= 2) {
@@ -332,6 +359,17 @@ if (getQueryString("product_id") == 3){
             $('.video-cont').append(videoItem);
             var code = `<div class="shopCar" code="${json[2].code}"></div>`
             $('.subgroup').append(code);
+            var newprice = `
+                <span class="price-new">
+                    <i>￥</i>
+                    ${json[2].newprice}
+                </span>
+                <span class="price-old">
+                    <i>￥</i>
+                    <del>${json[2].oldprice}</del>
+                </span>
+            `;
+            $('.price-val').append(newprice);
             var videoli = '';
             $.each(json[2].littleImg, function (index, item) {
                 if (index <= 2) {
@@ -445,7 +483,163 @@ if (getQueryString("product_id") == 3){
         }
     })
 }
+if (getQueryString("product_id") == 4) {
+    $.ajax({
+        url: "../data/details.json",
+        type: 'get',
+        success: function (json) {
+            var titledom = `<span>${json[3].title}</span>`;
+            $('.tit-crumb p').append(titledom);
+            var titledom1 = `<img src="${json[3].titleImg}" alt="">
+                <h2>${json[3].title}</h2>
+            `;
+            $('.title-name').append(titledom1);
+            var titBack = `<img class="tit-back" src="${json[3].titleback}" alt="">`;
+            $('.titleWrap').append(titBack);
+            var videoItem = '';
+            $.each(json[3].bigImg, function (index, item) {
+                if (index <= 2) {
+                    videoItem += `
+                    <div class="video-item">
+                        <video src="${item}" class="video" controls width="700px" height="394px" autoplay muted
+                            preload="metadata"></video>
+                    </div>
+                `
+                } else {
+                    videoItem += `
+                        <div class="video-item">
+                        <img src="${item}" alt="">
+                        </div>
+                    `
+                }
+            })
+            $('.video-cont').append(videoItem);
+            var code = `<div class="shopCar" code="${json[3].code}"></div>`
+            $('.subgroup').append(code);
+            var newprice = `
+                <span class="price-new">
+                    <i>￥</i>
+                    ${json[3].newprice}
+                </span>
+                <span class="price-old">
+                    <i>￥</i>
+                    <del>${json[3].oldprice}</del>
+                </span>
+            `;
+            $('.price-val').append(newprice);
+            var videoli = '';
+            $.each(json[3].littleImg, function (index, item) {
+                if (index <= 2) {
+                    if (index == 0) {
+                        videoli += `
+                        <li class="video-pos video-show">
+                                <span></span>
+                                <img src="${item}" alt="">
+                        </li>
+                    `
+                    } else {
+                        videoli += `
+                        <li class="video-pos">
+                                <span></span>
+                                <img src="${item}" alt="">
+                        </li>
+                    `
+                    }
+                } else {
+                    videoli += `
+                        <li>
+                            <span></span>
+                            <img src="${item}" alt="">
+                        </li>
+                    `
+                }
+            })
+            $('.video-ul').append(videoli);
+            $('.video-ul').find('li').eq(0).find('span').css('display', 'block');
 
+            var datedom = `<div class="fr-cont">
+                                ${json[3].date}
+                            </div>`;
+            var ratedom = `
+                <div class="fr-cont">
+                                ${json[3].rate}
+                            </div>
+            `;
+            var developers = `
+                <div class="fr-cont">
+                                ${json[3].developers}
+                            </div>
+            `;
+            var operator = `
+                <div class="fr-cont">
+                                ${json[3].operator}
+                            </div>
+            `
+            var platform = `
+                <div class="fr-cont">
+                                ${json[3].platform}
+                            </div>
+            `
+            $('.detail-prop-table li').eq(0).append(datedom);
+            $('.detail-prop-table li').eq(1).append(ratedom);
+            $('.detail-prop-table li').eq(2).append(developers);
+            $('.detail-prop-table li').eq(3).append(operator);
+            $('.detail-prop-table li').eq(4).append(platform);
+            // console.log($('.detail-prop-table li').eq(0));
+
+            var prettyTop = `
+                <h4>${json[3].saleTit}</h4>
+                        <p>共包括 ${json[3].saleNum} 款</p>
+                        <div class="operate">
+                            <span>￥${json[3].salePrice}</span>
+                        </div>
+            `;
+            $('.pretty-cont1-top').append(prettyTop);
+            var saleImg = '';
+            $.each(json[3].saleImg, function (index, item) {
+                if (index <= 1) {
+                    saleImg += `
+                        <li>
+                                <img src="${item}" alt="">
+                                <div class="pretty-position">
+                                </div>
+                            </li>
+                    `
+                } else {
+                    saleImg += `
+                        <li>
+                                <img src="${item}" alt="">
+                            </li>
+                    `
+                }
+            })
+            $('.pretty-cont1-ul ul').append(saleImg);
+
+            var relatedp1 = `
+                <h4>${json[3].relatedp1}</h4>
+            `;
+            var relatedp2 = `
+                <h4>${json[3].relatedp2}</h4>
+            `
+            $('.pre-cont2').eq(0).prepend(relatedp1);
+            $('.pre-cont2').eq(1).prepend(relatedp2);
+
+            var details = '';
+            $('.pretty-cont3-main').append(details);
+            var detailsImg = `<p class="ql-indent-1"><img
+                                        src="${json[3].detailsImg}">
+                                </p>`;
+            $('.pretty-cont3-main').append(detailsImg);
+            var detailsCon = '';
+            $.each(json[3].detailsCon, function (index, item) {
+                detailsCon += `
+                    <p class="ql-indent-1">${item}</p>
+                `
+            })
+            $('.pretty-cont3-main').append(detailsCon);
+        }
+    })
+}
 
 
 var $preViewmore = $('.pretty-viewmore');
@@ -482,6 +676,13 @@ $backtop.click(function () {
         scrollTop: 0
     });
 })
+$('.shop-car').click(function(){
+    open('http://localhost/wegame/dist/html/shopCar.html');
+})
+
+
+
+
 
 
 /* 视频轮播图 */

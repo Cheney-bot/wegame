@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="../img/title.jpg" type="image/x-icon">
+    <title>购物车</title>
     <link rel="stylesheet" href="../sass/reset.css">
     <link rel="stylesheet" href="../sass/shop.css">
 </head>
@@ -39,9 +40,9 @@
         <h2>购物车</h2>
     </div>
     <div class="allGoods">
-        <h3>全部商品<span>3</span></h3>
+        <h3>全部商品</h3>
     </div>
-
+    <!-- 添加的商品 -->
     <div class="mainWrap">
         <div class="main-top">
             <input class="allcheck" type="checkbox">
@@ -89,84 +90,24 @@
             </div>
         </div> -->
 
-            <!-- <div class="goodsBox">
-            <div class="store">
-                <input type="checkbox">
-                <h2>京东自营</h2>
+        <div class="goodNone">
+            <div class="noneInner">
+                <div class="none-figure"></div>
+                <h6>暂无内容</h6>
+                <p>快到商店购买选择您的内容吧</p>
+                <a href="http://localhost/wegame/dist/html/list.html">去商店看看</a>
             </div>
-            <div class="goodsCont">
-                <di v class="goodsItem">
-                    <img src="img/cont1.jpg" alt="">
-                    <div class="desc">
-                        <p>
-                            飞利浦（PHILIPS）男士电动剃须刀全身水洗干湿双剃剃
-                        </p>
-                    </div>
-                    <div class="desc2">
-                        1系干湿双剃 进口刀头...
-                    </div>
-                    <span class="unit">￥199.00</span>
-                    <div class="modified">
-                        <span class="subtract">一</span>
-                        <span class="number">1</span>
-                        <span class="add">＋</span>
-                    </div>
+        </div>
 
-                    <span class="subtotal">￥199.00</span>
-
-                    <div class="attention">
-                        <span class="remove">删除</span>
-                        <span class="atten">移到我的关注</span>
-                    </div>
-                </di>
-                <input type="checkbox" class="checkCont">
-            </div>
-        </div> -->
-
-            <!-- <div class="goodsBox">
-            <div class="store">
-                <input type="checkbox">
-                <h2>京东自营</h2>
-            </div>
-            <div class="goodsCont">
-                <div class="goodsItem">
-                    <img src="img/cont1.jpg" alt="">
-                    <div class="desc">
-                        <p>
-                            飞利浦（PHILIPS）男士电动剃须刀全身水洗干湿双剃剃
-                        </p>
-                    </div>
-                    <div class="desc2">
-                        1系干湿双剃 进口刀头...
-                    </div>
-                    <span class="unit">￥199.00</span>
-                    <div class="modified">
-                        <span class="subtract">一</span>
-                        <span class="number">1</span>
-                        <span class="add">＋</span>
-                    </div>
-
-                    <span class="subtotal">￥199.00</span>
-
-                    <div class="attention">
-                        <span class="remove">删除</span>
-                        <span class="atten">移到我的关注</span>
-                    </div>
-                </div>
-                <input type="checkbox" class="checkCont">
-            </div>
-        </div> -->
+            
         </div>
         <div class="clearCar">
             <div class="clearLeft">
                 <input type="checkbox" class="allcheck bot">
                 <span class="clearAll">全选</span>
-                <span class="deleteChosen">删除选中商品</span>
-                <span class="move">移到关注</span>
                 <span class="clear">清理购物车</span>
             </div>
             <div class="clearRight">
-                <p>已选择<span class="chosen">0</span>件商品</p>
                 <div class="total">
                     <div class="total-top">
                         <span>总价：</span>
@@ -179,6 +120,76 @@
             </div>
         </div>
     </div>
+
+    <!-- 底部 -->
+    <div class="footWrap">
+        <div class="footer">
+            <div class="foot-top">
+                <div class="foot-topLeft">
+                    <h3>下载客户端：</h3>
+                    <div class="foot-pc">
+                        <img src="../img/foot-pc.png" alt="">
+                        <span>PC端</span>
+                    </div>
+                </div>
+                <div class="foot-topCenter">
+                    <h3>官方渠道：</h3>
+                    <div class="rootwb">
+                        <div class="footwb-box1">
+                            <img src="../img/footWb.jpg" alt="">
+                            <span>微博</span>
+                        </div>
+                        <div class="footwb-box2">
+                            <img src="../img/footWx.jpg" alt="">
+                            <span>微信</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="foot-topRight">
+                    <h3>友情链接：</h3>
+                    <ul class="foot-topRightul">
+                        <li>QQ阅读</li>
+                        <li>腾讯GWB</li>
+                        <li>腾讯动漫</li>
+                        <li>腾讯视频</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="foot-bot">
+                <p class="copy-top">
+                    <span>关于腾讯丨</span>
+                    <span>About Tencent丨</span>
+
+                    <span>服务条款丨</span>
+
+                    <span>软件许可及服务协议丨</span>
+
+                    <span>隐私保护指引丨</span>
+
+                    <span>儿童隐私保护指引丨</span>
+
+                    <span>侵权通知丨</span>
+
+                    <span>广告服务丨</span>
+
+                    <span>腾讯招聘丨</span>
+
+                    <span>客服中心丨</span>
+
+                    <span>网站导航</span>
+                </p>
+                <p class="copy">COPYRIGHT © 1998 – 2020 TENCENT. ALL RIGHTS RESERVED.</p>
+                <p class="tenxun">腾讯公司 版权所有</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
     <script src="../script/utils.js"></script>
     <script src="../script/jquery-1.8.3.js"></script>
     <script src="../script/shop.js"></script>

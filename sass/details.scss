@@ -630,10 +630,9 @@ body::after {
         padding: 0 4px;
         box-sizing: border-box;
         i{
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 400;
             display: inline-block;
-            padding-right: 2px;
             box-sizing: border-box;
         }
     }
@@ -646,6 +645,9 @@ body::after {
         color: #757575;
         font-size: 14px;
         box-sizing: border-box;
+        i{
+            font-size: 12px;
+        }
     }
 }
 

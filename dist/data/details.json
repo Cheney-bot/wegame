@@ -13,6 +13,8 @@
         "operator": "空中网",
         "platform":"WeGame",
         "saleTit": "激战2 - 烈焰征途豪华版",
+        "newprice": 18,
+        "oldprice": 28,
         "saleNum":3,
         "salePrice":498,
         "code":"abc1",
@@ -55,6 +57,8 @@
         "platform": "WeGame",
         "saleTit": "梦三国2 - 烈焰征途豪华版",
         "saleNum": 2,
+        "newprice":48,
+        "oldprice":66,
         "salePrice": 498,
         "saleImg": [
             "../img/pretty-pic1.jpg",
@@ -101,6 +105,8 @@
         "platform": "WeGame",
         "saleTit": "永恒之塔 - 烈焰征途豪华版",
         "code": "abc3",
+        "newprice": 47.10,
+        "oldprice": 80,
         "saleNum": 3,
         "salePrice": 498,
         "saleImg": [
@@ -119,9 +125,9 @@
     }, 
     {
         "product_id": 4,
-        "title": "梦三国2",
-        "titleback": "../img/detailTitle2.jpg",
-        "titleImg": "https://wegame.gtimg.com/g.2001141-r.87b21/info/472cbb8a66bb50e1171f9c5acb51ef41.jpg",
+        "title": "枪火重生",
+        "titleback": "../img/detailTitle4.jpg",
+        "titleImg": "https://wegame.gtimg.com/g.2001460-r.a31b0/info/3968e01fed36c58269f2fba8ca12c9ad.jpg",
         "nav": "DLC(2)",
         "bigImg": [
             "../video/sanguo.mp4",
@@ -150,16 +156,18 @@
         "saleNum": 2,
         "salePrice": 498,
         "code": "abc4",
+        "newprice": 69,
+        "oldprice": 90,
         "saleImg": [
             "../img/pretty-pic1.jpg",
             "../img/pretty-pic2.jpg"
         ],
-        "relatedp1": "梦三国2 - 烈焰征途标准版",
-        "relatedp2": "梦三国2 - 烈焰征途豪华版升级包",
+        "relatedp1": "枪火重生 - 烈焰征途标准版",
+        "relatedp2": "枪火重生 - 烈焰征途豪华版升级包",
         "detailsImg": "https://wegame.gtimg.com/g.2001141-r.87b21/info/a01217a9978d667732ef7ab417269a3d.jpg",
         "detailsCon": [
-            "《梦三国》是由杭州电魂网络科技股份有限公司自主研发的一款将RTS元素融合到RPG网游中的即时战略网络游戏。",
-            "《梦三国2》游戏以竞技对战与关卡副本双重玩法，英雄分为：魏、蜀、吴和中立四个阵营，共计130名三国名将可以供玩家操控；各种历史典故的战役如虎牢关大战、火烧博望坡等，以及事件如三顾茅庐、千里走单骑等，被改编成副本地图，让你于三国英雄并肩作战，身临其境体验历史文化的美感。",
+            "《枪火重生》是由杭州电魂网络科技股份有限公司自主研发的一款将RTS元素融合到RPG网游中的即时战略网络游戏。",
+            "《枪火重生》游戏以竞技对战与关卡副本双重玩法，英雄分为：魏、蜀、吴和中立四个阵营，共计130名三国名将可以供玩家操控；各种历史典故的战役如虎牢关大战、火烧博望坡等，以及事件如三顾茅庐、千里走单骑等，被改编成副本地图，让你于三国英雄并肩作战，身临其境体验历史文化的美感。",
             "泰瑞亚世界的真实年龄未知，而最早的记录可以追溯到巨狼族消失时的莫菲利安历10,玩家搜集不同的三国英雄卡，参与各种竞技场的挑战，通过团队、国家的配合以及个人的操作意识来击败对手，取得最终胜利。"
         ]
     }

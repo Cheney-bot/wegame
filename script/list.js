@@ -103,7 +103,9 @@ $backtop.click(function () {
         scrollTop: 0
     });
 })
-
+$('.shop-car').click(function () {
+    open('http://localhost/wegame/dist/html/shopCar.html');
+})
 
 
 
@@ -455,37 +457,3 @@ $('.all-title').on('click', '.label-del',function(){
 
 
 
-
-
-
-
-
-
-
-/* 热门标签 */
-/* var $condItem = $('.condetion-item');
-var condFlag = 0;
-$condItem.click(function () {
-    if (!condFlag) {
-        checkFlag = 0;
-        $(this).find('input').attr('checked', true);
-        condFlag = 1;
-        var val = $(this).find('span').text();
-        var newDom = `
-            <div class="label-del">${val}
-                <i class="label-remove">×</i>
-            </div>
-        `
-        $('.alltips').css("display", 'none');
-        $('.turn-r').css("display", 'none');
-        $('.pretty-hd').css('display', 'block').append(newDom);
-    } else {
-        $(this).find('input').attr('checked', false);
-        condFlag = 0;
-        checkFlag = 1;
-        $('.pretty-hd').css('display', 'none');
-        $('.alltips').css("display", 'block');
-        $('.turn-r').css("display", 'block');
-        $('.label-del').remove();
-    };
-}); */

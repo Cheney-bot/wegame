@@ -131,26 +131,69 @@ logBtn.onclick = function () {
     })
 }
 
-register.onclick = function () {
-    if (ipt1.value == '' || ipt2.value == '') {
-        return false;
-    }
-    ajax({
-        url: '../php/login.php',
-        type: 'post',
-        data: {
-            type: 'add',
-            user: ipt1.value,
-            pass: ipt2.value
-        },
-        dataType: 'json',
-        success: function (data) {
-            var json = JSON.parse(data);
-            alert(json.msg);
-        },
-        error: function (status) {
-            alert(status + '注册失败');
-        }
 
-    })
-}
+
+
+var $formgroup = $('.form-group');
+
+// var num = 2145364576432;
+// console.log(reg1.test(num));
+// console.log(reg1.test(num));
+
+
+$('.banBot').on('click', '.editSubmit',function(){
+    var user = $formgroup.eq(0).find('input').val();
+    var pass = $formgroup.eq(1).find('input').val();
+    var email = $formgroup.eq(2).find('input').val();
+    var idcard = $formgroup.eq(3).find('input').val();
+    var reg1 = /[0-9 | a-z | A-Z]{8,16}/ig;
+    var reg2 = /[0-9 | a-z | A-Z]{8,16}/ig;
+    var reg3 = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$");
+    var reg4 = /^[1-9]\d{5}(19|20)\d{2}[01]\d[0123]\d\d{3}[xX\d]$/;
+
+
+    var flag1 = reg1.test(user);
+    var flag2 = reg2.test(pass);
+    var flag3 = reg3.test(email);
+    var flag4 = reg4.test(idcard);
+
+      if (!(user | pass | email | idcard)) {
+          alert('输入框不能为空！！！')
+          return false;
+      } 
+      if (flag1 && flag2 && flag3 && flag4){
+         $.ajax({
+             url: '../php/login.php',
+             type: 'get',
+             data: {
+                 type: 'add',
+                 user: user,
+                 pass: pass
+             },
+             dataType: 'json',
+             success: function (json) {
+                alert(json.msg);
+                $('.btn-default').click();
+             },
+             error: function (status) {
+                 alert(status + '注册失败');
+             }
+
+         })
+      }else{
+          if (!flag1){
+            alert('请输入正确的账号！');
+          }
+          if(!flag2){
+            alert('请输入正确的密码！');
+          }
+          if(!flag3){
+              alert('请输入正确的邮箱！')
+          }
+          if (!flag4) {
+              alert('请输入正确的身份证！')
+          }
+      }
+     
+
+})

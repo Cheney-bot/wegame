@@ -299,15 +299,16 @@ body::after {
     position: relative;
     margin: 0 auto;
     margin-top: 10px;
+    overflow: hidden;
 }
 
 .allGoods h3 {
     float: left;
-    color: #e2231a;
+    color: #F8C20A;
     font-size: 16px;
     height: 37px;
     line-height: 37px;
-    border-bottom: 1px solid #e2231a;
+    border-bottom: 1px solid #F8C20A;
     position: relative;
     z-index: 100;
     box-sizing: border-box;
@@ -328,6 +329,67 @@ body::after {
 
 
 
+/* 没有产品 */
+
+.goodNone{
+    width: 100%;
+    height: 314px;
+    position: relative;
+    display: none;
+    background: #fff;
+    text-align: center;
+}
+
+.noneInner{
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    margin: 0 auto;
+    h6{
+        color: #3c3c3c;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    p{
+        color: #bfbfbf;
+        font-size: 14px;
+        margin-top: 4px;
+        text-align: center;
+        white-space: normal;
+    }
+    a{
+        font-weight: 700;
+        margin-top: 20px;
+        border-color: #a4a4a4;
+        display: inline-block;
+        line-height: 24px;
+        padding: 0 12px;
+        font-size: 12px;
+        color: #3c3c3c;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 26px;
+        text-align: center;
+        cursor: pointer;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+.none-figure{
+    width: 60px;
+    height: 60px;
+    background: url(../img/noneCar.png) no-repeat;
+    font-size: 0;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin: 20px 0 20px 54px;
+}
+
+
+
+
+
 
 
 
@@ -340,12 +402,13 @@ body::after {
 }
 
 .main-top {
-    width: 978px;
+    width: 990px;
     height: 44px;
     background-color: #f3f3f3;
     border: 1px solid #e0e0e0;
     line-height: 44px;
     padding-left: 12px;
+    box-sizing: border-box;
 }
 
 .main-top span {
@@ -384,11 +447,11 @@ body::after {
 /* goodsWrap */
 
 .goodsWrap {
-    width: 978px;
+    width: 990px;
 }
 
 .goodsBox {
-    width: 978px;
+    width: 990px;
     height: 170px;
     overflow: hidden;
 }
@@ -407,7 +470,7 @@ body::after {
 }
 
 .store h2 {
-    background-color: #da0012;
+    background-color: #C79B05;
     text-align: center;
     padding: 4px;
     color: #fff;
@@ -588,7 +651,7 @@ body::after {
 .clearRight .total {
     float: left;
     overflow: hidden;
-    margin-left: 10px;
+    margin-right: 20px;
 }
 
 .total .total-top {
@@ -602,10 +665,215 @@ body::after {
 .settlement {
     float: right;
     height: 52px;
-    background-color: #e64347;
+    background-color: #C79B05;
     padding: 0px 20px;
     color: #fff;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* 底部 */
+.footWrap {
+    width: 100%;
+    height: 290px;
+    overflow: hidden;
+    background-color: #191919;
+    margin-top: 66px;
+}
+
+.footer {
+    width: 1000px;
+    height: 290px;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    padding: 56px 0;
+}
+
+.foot-top {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+    word-wrap: normal;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.foot-topLeft {
+    float: left;
+    margin-right: 178px;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 166px;
+
+    h3 {
+        margin-right: 20px;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(255, 255, 255, 0.4);
+        float: left;
+    }
+}
+
+.foot-pc {
+    width: 50px;
+    overflow: hidden;
+    box-sizing: border-box;
+    float: left;
+
+    img {
+        border-radius: 50%;
+        border: 1px solid #5f5f60;
+        margin-bottom: 10px;
+    }
+
+    span {
+        display: block;
+        font-size: 12px;
+        color: #565657;
+        margin-left: 10px;
+    }
+}
+
+.foot-topCenter {
+    float: left;
+    font-size: 0;
+    white-space: nowrap;
+    word-wrap: normal;
+
+    h3 {
+        margin-right: 20px;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(255, 255, 255, 0.4);
+        float: left;
+    }
+}
+
+.rootwb {
+    overflow: hidden;
+
+}
+
+.footwb-box1 {
+    float: left;
+
+    span {
+        display: block;
+        font-size: 12px;
+        color: #5f5f60;
+        margin-left: 12px;
+        margin-top: 10px;
+    }
+}
+
+.footwb-box2 {
+    float: left;
+    margin-left: 10px;
+
+    span {
+        display: block;
+        font-size: 12px;
+        color: #5f5f60;
+        margin-left: 14px;
+        margin-top: 10px;
+    }
+}
+
+.foot-topRight {
+    float: right;
+    overflow: hidden;
+
+    h3 {
+        margin-right: 20px;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(255, 255, 255, 0.4);
+        float: left;
+    }
+
+}
+
+.foot-topRightul {
+    width: 150px;
+    height: 60px;
+    overflow: hidden;
+
+    li {
+        color: #5f5f60;
+        float: left;
+        margin-right: 20px;
+        font-size: 14px;
+        width: 52px;
+        height: 12px;
+        margin-bottom: 15px;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+            color: #909090;
+        }
+    }
+}
+
+.foot-topRightul li:nth-child(2) {
+    margin-right: 0;
+}
+
+.foot-topRightul li:nth-child(4) {
+    margin-right: 0;
+}
+
+
+.foot-bot {
+    padding-top: 30px;
+    width: 1000px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.copy-top {
+    margin-left: 90px;
+
+    span {
+        float: left;
+        font-size: 12px;
+        margin-left: 4px;
+        color: #5d5d5d;
+        cursor: pointer;
+
+        &:hover {
+            color: #909090;
+        }
+    }
+}
+
+.copy {
+    width: 1000px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    color: #5d5d5d;
+}
+
+.tenxun {
+    width: 1000px;
+    height: 24px;
+    text-align: center;
+    line-height: 46px;
+    color: #5d5d5d;
+    cursor: pointer;
+
+    &:hover {
+        color: #909090;
+    }
 }

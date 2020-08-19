@@ -157,6 +157,7 @@ body::after {
     cursor: pointer;
 }
 
+/* 注册 */
 
 
 
@@ -279,10 +280,10 @@ body::after {
 }
 
 .loginBox1 input {
-    line-height: 18px;
-    height: 18px;
+    line-height: 30px;
+    height: 30px;
     border: 0;
-    padding: 10px 0 10px 50px;
+    padding: 15px 0 10px 50px;
     width: 254px;
     float: none;
     overflow: hidden;
@@ -300,8 +301,8 @@ body::after {
 }
 
 .loginBox2 input {
-    line-height: 18px;
-    height: 18px;
+    line-height: 30px;
+    height: 30px;
     border: 0;
     padding: 10px 0 10px 50px;
     width: 254px;
@@ -352,6 +353,7 @@ body::after {
     font-size: 20px;
     color: #fff;
     margin-top: 22px;
+    cursor: pointer;
 }
 
 /* nav */
