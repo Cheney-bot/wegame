@@ -1,4 +1,9 @@
-
+if (getCookie('username')) {
+    $('.widget-header-login-btn').text(getCookie('username'));
+    $('.widget-header-login-btn').prop('href', 'javascript:;');
+} else {
+    $('.widget-header-login-btn').text("登录");
+}
 if (getQueryString("product_id") == 1){
     $.ajax({
         url:"../data/details.json",
@@ -754,25 +759,27 @@ $('.video-ul').on('click','li',function(){
 
 
 
-var mySwiper = new Swiper('.swiper-container', {
-      direction: 'horizontal', // 垂直切换选项
-      loop: true, // 循环模式选项
-      autoplay:{
-          disableOnInteraction: false,
-      },
-      effect: 'fade',
 
-      // 如果需要前进后退按钮
-      navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-      }
-
-  })
 
 
  $('.video-cont').on("click", '.video-item',function(){
-   $('.bigWrap').fadeIn(500);
+   $('.bigWrap').fadeIn(500,function(){
+       var mySwiper = new Swiper('.swiper-container', {
+           direction: 'horizontal', // 垂直切换选项
+           loop: true, // 循环模式选项
+           autoplay: {
+               disableOnInteraction: false,
+           },
+           effect: 'fade',
+
+           // 如果需要前进后退按钮
+           navigation: {
+               nextEl: '.swiper-button-next',
+               prevEl: '.swiper-button-prev',
+           }
+
+       })
+   });
 
 }) 
 $('.big-close').click(function () {

@@ -1,7 +1,15 @@
+if (getCookie('username')) {
+    $('.widget-header-login-btn').text(getCookie('username'));
+    $('.widget-header-login-btn').prop('href', 'javascript:;');
+} else {
+    $('.widget-header-login-btn').text("登录");
+}
+
+
 //点击find输入框
-$fript = $('.fr-ipt');
-$frclose = $('.fr-close');
-$frhide = $('.fr-hidebox');
+var $fript = $('.fr-ipt');
+var $frclose = $('.fr-close');
+var $frhide = $('.fr-hidebox');
 var frFalg = 1;
 //显示close
 $fript.keyup(function () {
@@ -20,7 +28,27 @@ $fript.blur(function () {
     $frclose.css('display', 'none');
     $frhide.css('display', 'none');
 })
-
+  /* find输入框jsonp请求 */
+$fript.keyup(function () {
+    $.ajax({
+        url: '../php/baidu.php',
+        tepe: 'get',
+        data: 'wd=' + $fript.val(),
+        dataType: 'json',
+        success: function (json) {
+            console.log(json);
+            $('.fr-ipt-ul').html('');
+            // $('.fr-ipt-ul').innerHTML = '';
+            json.s.forEach(function (item) {
+                console.log(item);
+                $('.fr-ipt-ul')[0].innerHTML += '<li>' + item + '</li>';
+            });
+            if ($fript.val() == '') {
+                ('.fr-ipt-ul').css('height', 0);
+            }
+        }
+    })
+})
 
 
 
@@ -423,16 +451,26 @@ $check.click(function(e){
         e.stopPropagation();
         if(val =='篮球'){
             ajaxType('basketball');
+            $('.nullWrap').css('display', 'none');
         } else if (val == '单机'){
             ajaxType('single');
+            $('.nullWrap').css('display', 'none');
         }else if(val == '电子竞技'){
             ajaxType('athletics');
+            $('.nullWrap').css('display', 'none');
         }else if(val == '大型网游'){
             ajaxType('online');
+            $('.nullWrap').css('display', 'none');
+        } else if (val == "免费" || val == '竞速赛车' || val =='功能游戏'){
+            $('.game-card').css('display',"none");
+            $('.nullWrap').css('display','block');
+            $('.all-numbers').text(0);
         }
     }else{
         $(this).parent().siblings('a').find('input').prop('disabled', false);
         e.stopPropagation();
+        $('.nullWrap').css('display', 'none');
+        $('.game-card').css('display', "block");
         $('.pretty-hd').css('display', 'none');
         $('.alltips').css("display", 'block');
         $('.turn-r').css("display", 'block');
@@ -446,6 +484,7 @@ $('.turn-ul li').click(function(){
 $('.all-title').on('click', '.label-del',function(){
     $('.pretty-hd').css('display', 'none');
     $('.alltips').css("display", 'block');
+    $('.game-card').css('display', "block");
     $('.turn-r').css("display", 'block');
     $('.label-del').remove();
     $('.check').prop({

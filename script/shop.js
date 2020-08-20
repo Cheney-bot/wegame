@@ -1,3 +1,10 @@
+if (getCookie('username')) {
+    $('.widget-header-login-btn').text(getCookie('username'));
+    $('.widget-header-login-btn').prop('href', 'javascript:;');
+} else {
+    $('.widget-header-login-btn').text("登录");
+}
+
 $(function () {
     if (localStorage.getItem('goods')) {
         //获得已经存在的localStorage中的goods

@@ -1,7 +1,27 @@
 export {find}
 
+
+
 function find(){
-    setTimeout(()=>{
+    function getCookie(key) {
+        var arr1 = document.cookie.split('; ');
+        for (var i = 0, len = arr1.length; i < len; i++) {
+            var arr2 = arr1[i].split('=');
+            if (arr2[0] === key) {
+                return unescape(arr2[1]);
+            }
+        }
+        return null;
+    }
+        if(getCookie('username')){
+            $('.widget-header-login-btn').text(getCookie('username'));
+            $('.widget-header-login-btn').prop('href','javascript:;');
+        }else{
+            $('.widget-header-login-btn').text("登录");
+        }
+
+
+
          var $fript = $('.fr-ipt');
          var $frclose = $('.fr-close');
          var $frhide = $('.fr-hidebox');
@@ -48,7 +68,4 @@ function find(){
                  }
              })
          })
-
-    },3000)
-   
 }

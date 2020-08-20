@@ -8,7 +8,6 @@ html {
 body::after {
   content: "";
   background-color: #eee;
-  background-color: var(--color-fill-page-bg);
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -381,7 +380,7 @@ body::after {
 
 .fr-hidebox {
   position: absolute;
-  max-height: 330px;
+  max-height: 550px;
   top: 35px;
   left: 0;
   width: 100%;
@@ -394,6 +393,17 @@ body::after {
   border-radius: 3px;
   display: none;
   z-index: 20; }
+
+.fr-ipt-ul {
+  width: 100%; }
+  .fr-ipt-ul li {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    overflow: hidden; }
+    .fr-ipt-ul li:hover {
+      background: #f4f4f4; }
 
 .fr-botbox {
   overflow: hidden;
@@ -886,6 +896,45 @@ body::after {
       border-color: #a4a4a4;
       color: #3c3c3c; }
 
+/* 点击热门标签无内容 */
+.nullWrap {
+  display: none;
+  overflow: hidden;
+  padding-top: 15px;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 205px; }
+
+.null-data {
+  background-color: transparent;
+  min-height: 205px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  position: relative;
+  display: table;
+  width: 100%; }
+
+.null-data-txt {
+  background-color: #fff;
+  border-radius: 4px;
+  height: auto;
+  font-size: 14px;
+  text-align: center;
+  padding: 30px;
+  display: table-cell;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: #757575; }
+  .null-data-txt::before {
+    content: "";
+    display: block;
+    width: 92px;
+    height: 38px;
+    position: relative;
+    margin: 10px auto 20px;
+    opacity: 1;
+    background: url(../img/null.png) no-repeat; }
+
 /* 全部内容右侧 */
 .pre-right-cont1 {
   background-color: #fff;
@@ -916,6 +965,42 @@ body::after {
   padding-top: 10px;
   box-sizing: border-box;
   min-height: 200px; }
+
+.pre-right-bt1 {
+  padding-top: 10px; }
+  .pre-right-bt1 ul {
+    display: table;
+    width: 100%;
+    border-spacing: 2px; }
+    .pre-right-bt1 ul li {
+      margin-bottom: 2px;
+      display: table-row;
+      width: 100%; }
+      .pre-right-bt1 ul li span {
+        display: table-cell;
+        width: 100%;
+        padding: 0 0 0 10px;
+        background-color: rgba(0, 0, 0, 0.05);
+        vertical-align: middle;
+        border-radius: 2px;
+        color: #757575; }
+      .pre-right-bt1 ul li .ico-bg {
+        height: 36px;
+        background: rgba(0, 0, 0, 0.07);
+        text-align: center;
+        width: 40px;
+        padding: 0 12px; }
+  .pre-right-bt1 p {
+    line-height: 24px;
+    color: #9d9d9d;
+    font-size: 12px; }
+  .pre-right-bt1 a {
+    display: block;
+    color: #9d9d9d;
+    margin-bottom: 6px; }
+    .pre-right-bt1 a:hover {
+      color: #f69c00;
+      text-decoration: underline; }
 
 .active {
   background-color: rgba(255, 200, 0, 0.2);
