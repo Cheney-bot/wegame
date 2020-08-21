@@ -25,9 +25,10 @@ body::after{
     width: 100%;
     height: 80px;
     background-color: #191919;
+    min-width: 1349px;
 }
 .header{
-    width: 100%;
+    width: 1349px;
     height: 80px;
     margin: 0 auto;
     overflow: hidden;
@@ -157,6 +158,7 @@ body::after{
 .fr-wrapper{
     width: 100%;
     height: 50px;
+    min-width: 1349px;
     background-color: #fff;
 }
 .fr-wrapper .fr-container{
@@ -516,14 +518,15 @@ body::after{
 .bannerWrap{
     width: 100%;
     height: 450px;
+    min-width: 1349px;
     overflow: hidden;
     position: relative;
 }
 .swiper-container{
-    width: 1366px;
+    width: 1349px;
     height: 450px;
     margin: 0 auto;
-    overflow: hidden;
+    // overflow: hidden;
 }
 .bannerBullet{
     display: block;
@@ -1364,11 +1367,7 @@ body::after{
 
 
 /* 测试专区 */
-.testWrap{
-    width:100%;
-    height: 550px;
-    overflow: hidden;
-}
+
 .test{
     width: 1000px;
     height: 550px;
@@ -1927,11 +1926,6 @@ body::after{
 
 
 /* 蛋蛋推荐 */
-.recommendWrap{
-    width: 100%;
-    height: 480px;
-    overflow: hidden;
-}
 .recommend{
     width: 1000px;
     height: 480px;
@@ -2091,6 +2085,7 @@ body::after{
     width: 100%;
     height: 290px;
     overflow: hidden;
+    min-width: 1349px;
     background-color: #191919;
     margin-top: 66px;
 }

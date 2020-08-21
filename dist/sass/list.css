@@ -24,10 +24,11 @@ body::after {
 .headerWrap {
   width: 100%;
   height: 80px;
-  background-color: #191919; }
+  background-color: #191919;
+  min-width: 1349px; }
 
 .header {
-  width: 100%;
+  width: 1349px;
   height: 80px;
   margin: 0 auto;
   overflow: hidden;
@@ -234,7 +235,8 @@ body::after {
 .fr-wrapper {
   width: 100%;
   height: 50px;
-  background-color: #fff; }
+  background-color: #fff;
+  min-width: 1349px; }
 
 .fr-wrapper .fr-container {
   width: 1349px;
@@ -1135,7 +1137,8 @@ body::after {
   height: 290px;
   overflow: hidden;
   background-color: #191919;
-  margin-top: 66px; }
+  margin-top: 66px;
+  min-width: 1349px; }
 
 .footer {
   width: 1000px;

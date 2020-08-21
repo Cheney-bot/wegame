@@ -9,7 +9,6 @@ html {
 body::after {
     content: "";
     background-color: #eee;
-    background-color: var(--color-fill-page-bg);
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -32,10 +31,11 @@ body::after {
     width: 100%;
     height: 80px;
     background-color: #191919;
+    min-width: 1349px;
 }
 
 .header {
-    width: 100%;
+    width: 1349px;
     height: 80px;
     margin: 0 auto;
     overflow: hidden;
@@ -185,6 +185,7 @@ body::after {
     // background: url(../img/detailTitle.jpg) no-repeat top #fff;
     background: #fff;
     margin-bottom: 20px;
+    min-width: 1000px;
 }
 .title{
     width: 1000px;
@@ -1188,9 +1189,10 @@ body::after {
     height: 310px;
     padding-top: 20px;
     box-sizing: border-box;
+    min-width: 1349px;
 }
 .footWrap {
-    width: 100%;
+    width: 1349px;
     height: 290px;
     overflow: hidden;
     background-color: #191919;
